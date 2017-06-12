@@ -1,6 +1,6 @@
 ﻿namespace ReplaceConstructorsWithCreationMethods
 {
-    internal class CapitalStrategyRevolver : CapitalStrategy
+    public class CapitalStrategyRevolver : CapitalStrategy
     {
     }
 }

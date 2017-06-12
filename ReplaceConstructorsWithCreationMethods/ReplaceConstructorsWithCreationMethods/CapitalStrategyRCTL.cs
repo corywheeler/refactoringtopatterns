@@ -1,6 +1,6 @@
 ﻿namespace ReplaceConstructorsWithCreationMethods
 {
-    internal class CapitalStrategyRCTL : CapitalStrategy
+    public class CapitalStrategyRCTL : CapitalStrategy
     {
     }
 }
