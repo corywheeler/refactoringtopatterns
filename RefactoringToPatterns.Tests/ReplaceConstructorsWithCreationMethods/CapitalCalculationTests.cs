@@ -1,5 +1,6 @@
 ﻿﻿using NUnit.Framework;
 using System;
+//using Temp;
 using ReplaceConstructorsWithCreationMethods;
 
 namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
@@ -14,6 +15,7 @@ namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
         [SetUp]
 		public void Init()
 		{
+            
 		}
 
         [Test]

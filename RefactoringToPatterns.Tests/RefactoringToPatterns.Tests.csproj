@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj">
-      <Project>{4299BF7C-B84B-4F0D-B786-1421566DC35C}</Project>
+      <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>
       <Name>ReplaceConstructorsWithCreationMethods</Name>
     </ProjectReference>
   </ItemGroup>
