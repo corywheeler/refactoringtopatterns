@@ -1,16 +1,15 @@
 ﻿﻿using NUnit.Framework;
 using System;
-//using Temp;
-using ReplaceConstructorsWithCreationMethods;
+ using ReplaceConstructorsWithCreationMethods.InitialCode;
 
 namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
 {
     [TestFixture]
     public class CapitalCalculationTests
     {
-		private const double commitment = 3.0;
-		private const int riskRating = 5;
-        DateTime maturity = DateTime.MinValue;
+		private const double Commitment = 3.0;
+		private const int RiskRating = 5;
+        readonly DateTime _maturity = DateTime.MinValue;
 
         [SetUp]
 		public void Init()
@@ -21,7 +20,7 @@ namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
         [Test]
         public void GiveMeAGoodName()
         {
-            Assert.IsInstanceOf(typeof(CapitalStrategyRevolver), new Loan(commitment, riskRating, maturity));
+            Assert.IsInstanceOf(typeof(CapitalStrategyRevolver), new Loan(Commitment, RiskRating, _maturity));
         }
     }
 }

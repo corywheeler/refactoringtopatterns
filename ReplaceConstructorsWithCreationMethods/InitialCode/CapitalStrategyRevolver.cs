@@ -1,4 +1,4 @@
-﻿namespace ReplaceConstructorsWithCreationMethods
+﻿namespace ReplaceConstructorsWithCreationMethods.InitialCode
 {
 	public class CapitalStrategyRevolver : CapitalStrategy
 	{

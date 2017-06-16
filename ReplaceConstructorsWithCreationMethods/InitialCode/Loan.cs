@@ -1,14 +1,15 @@
 ﻿using System;
-namespace ReplaceConstructorsWithCreationMethods
+
+namespace ReplaceConstructorsWithCreationMethods.InitialCode
 {
 	public class Loan
 	{
-		private double commitment;
-		readonly double outstanding;
-		readonly int riskRating;
-		readonly DateTime maturity;
-		readonly DateTime expiry;
-		readonly CapitalStrategy capitalStrategy;
+		private double _commitment;
+		readonly double _outstanding;
+		readonly int _riskRating;
+		readonly DateTime _maturity;
+		readonly DateTime _expiry;
+		readonly CapitalStrategy _capitalStrategy;
 
 		public Loan(double commitment, int riskRating, DateTime maturity)
 			: this(commitment, 0.00, riskRating, maturity, DateTime.MinValue)
@@ -42,21 +43,21 @@ namespace ReplaceConstructorsWithCreationMethods
 					double outstanding, int riskRating, DateTime maturity,
 					DateTime expiry)
 		{
-			this.commitment = commitment;
-			this.outstanding = outstanding;
-			this.riskRating = riskRating;
-			this.maturity = maturity;
-			this.expiry = expiry;
-			this.capitalStrategy = capitalStrategy;
+			this._commitment = commitment;
+			this._outstanding = outstanding;
+			this._riskRating = riskRating;
+			this._maturity = maturity;
+			this._expiry = expiry;
+			this._capitalStrategy = capitalStrategy;
 
 			if (capitalStrategy == null)
 			{
 				if (expiry == DateTime.MinValue)
-					this.capitalStrategy = new CapitalStrategyTermLoan();
+					this._capitalStrategy = new CapitalStrategyTermLoan();
 				else if (maturity == DateTime.MinValue)
-					this.capitalStrategy = new CapitalStrategyRevolver();
+					this._capitalStrategy = new CapitalStrategyRevolver();
 				else
-					this.capitalStrategy = new CapitalStrategyRCTL();
+					this._capitalStrategy = new CapitalStrategyRCTL();
 			}
 		}
 	}
