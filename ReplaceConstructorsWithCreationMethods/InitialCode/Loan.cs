@@ -11,7 +11,7 @@ namespace ReplaceConstructorsWithCreationMethods.InitialCode
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-		public Loan(double commitment, int riskRating, DateTime? maturity)
+        public Loan(double commitment, int riskRating, DateTime? maturity)
             : this(commitment, 0.00, riskRating, maturity, null)
 		{
 
@@ -56,6 +56,14 @@ namespace ReplaceConstructorsWithCreationMethods.InitialCode
 					this._capitalStrategy = new CapitalStrategyRevolver();
 				else
 					this._capitalStrategy = new CapitalStrategyRCTL();
+			}
+		}
+
+		public CapitalStrategy CapitalStrategy
+		{
+			get
+			{
+				return _capitalStrategy;
 			}
 		}
 	}
