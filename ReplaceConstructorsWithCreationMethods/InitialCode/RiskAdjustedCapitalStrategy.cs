@@ -2,8 +2,5 @@
 {
     public class RiskAdjustedCapitalStrategy: CapitalStrategy
     {
-        public RiskAdjustedCapitalStrategy()
-        {
-        }
     }
 }
