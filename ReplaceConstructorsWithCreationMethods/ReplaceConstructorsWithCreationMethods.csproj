@@ -37,7 +37,16 @@
     <Compile Include="InitialCode\CapitalStrategyRevolver.cs" />
     <Compile Include="InitialCode\CapitalStrategyRCTL.cs" />
     <Compile Include="InitialCode\RiskAdjustedCapitalStrategy.cs" />
+    <Compile Include="MyWork\CapitalStrategy.cs" />
+    <Compile Include="MyWork\CapitalStrategyRCTL.cs" />
+    <Compile Include="MyWork\CapitalStrategyRevolver.cs" />
+    <Compile Include="MyWork\CapitalStrategyTermLoan.cs" />
+    <Compile Include="MyWork\Loan.cs" />
+    <Compile Include="MyWork\RiskAdjustedCapitalStrategy.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="MyWork\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

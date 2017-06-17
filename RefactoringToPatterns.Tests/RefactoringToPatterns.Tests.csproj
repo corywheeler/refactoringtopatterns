@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
+    <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -48,6 +49,7 @@
   <ItemGroup>
     <Folder Include="ReplaceConstructorsWithCreationMethods\" />
     <Folder Include="ReplaceConstructorsWithCreationMethods\InitialCode\" />
+    <Folder Include="ReplaceConstructorsWithCreationMethods\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
