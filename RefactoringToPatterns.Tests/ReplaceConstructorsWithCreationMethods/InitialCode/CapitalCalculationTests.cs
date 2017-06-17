@@ -2,7 +2,7 @@
 using System;
 using ReplaceConstructorsWithCreationMethods.InitialCode;
 
-namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
+namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.InitialCode
 {
     [TestFixture]
     public class CapitalCalculationTests
