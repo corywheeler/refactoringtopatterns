@@ -7,20 +7,27 @@ namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
     [TestFixture]
     public class CapitalCalculationTests
     {
-		private const double Commitment = 3.0;
-		private const int RiskRating = 5;
-        readonly DateTime _maturity = DateTime.MinValue;
+        private const double Commitment = 3.0;
+        private const int RiskRating = 5;
+        private readonly DateTime? _maturity = new DateTime(2020, 10, 2);
 
         [SetUp]
-		public void Init()
-		{
-            
-		}
+        public void Init()
+        {
+        }
 
         [Test]
-        public void GiveMeAGoodName()
+        public void TestTermLoanNoPayments()
         {
-            Assert.IsInstanceOf(typeof(CapitalStrategyRevolver), new Loan(Commitment, RiskRating, _maturity));
+            Loan loan = new Loan(Commitment, RiskRating, _maturity);
+            Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
+        }
+
+        [Test]
+        public void TestTermLoanOnePayment()
+        {
+            Loan loan = new Loan(Commitment, RiskRating, _maturity);
+            Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
     }
 }
