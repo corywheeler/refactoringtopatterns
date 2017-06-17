@@ -1,6 +1,6 @@
 ﻿﻿using NUnit.Framework;
 using System;
- using ReplaceConstructorsWithCreationMethods.InitialCode;
+using ReplaceConstructorsWithCreationMethods.InitialCode;
 
 namespace RefactoringToPatterns.Tests.ReplaceConstructorsWithCreationMethods
 {
