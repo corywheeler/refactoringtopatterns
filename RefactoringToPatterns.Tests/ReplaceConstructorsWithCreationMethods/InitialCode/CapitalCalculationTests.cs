@@ -16,6 +16,7 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.InitialCo
             new RiskAdjustedCapitalStrategy();
         const int RiskRating = 5;
 
+        [SetUp]
         public void Init()
         {
         }
