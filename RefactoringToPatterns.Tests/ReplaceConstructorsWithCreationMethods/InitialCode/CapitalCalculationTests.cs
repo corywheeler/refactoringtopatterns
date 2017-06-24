@@ -22,35 +22,35 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.InitialCo
         }
 
         [Test]
-        public void TestTermLoanNoPayments()
+        public void test_term_loan_no_payments()
         {
             Loan loan = new Loan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
         [Test]
-        public void TestTermLoanOnePayment()
+        public void test_term_loan_one_payment()
         {
             Loan loan = new Loan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
         [Test]
-        public void TestRevolverLoanNoPayments()
+        public void test_revolver_loan_no_payments()
         {
             Loan loan = new Loan(Commitment, RiskRating, null, _expiry);
             Assert.IsInstanceOf(typeof(CapitalStrategyRevolver), loan.CapitalStrategy);
         }
 
         [Test]
-        public void TestRCTLLoanOnePayment()
+        public void test_RCTL_loan_one_payment()
         {
             Loan loan = new Loan(Commitment, Outstanding, RiskRating, _maturity, _expiry);
             Assert.IsInstanceOf(typeof(CapitalStrategyRCTL), loan.CapitalStrategy);
         }
 
         [Test]
-        public void TestTermLoanWithRiskAdjustedCapitalStrategy() {
+        public void test_term_loan_with_risk_adjusted_capital_strategy() {
             Loan loan = new Loan(_riskAdjustedCapitalStrategy, 
                                  Commitment, Outstanding, RiskRating, 
                                  _maturity, null);
