@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
+    <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -45,11 +46,17 @@
       <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>
       <Name>ReplaceConstructorsWithCreationMethods</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChainConstructors\ChainConstructors.csproj">
+      <Project>{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}</Project>
+      <Name>ChainConstructors</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ReplaceConstructorsWithCreationMethods\" />
     <Folder Include="ReplaceConstructorsWithCreationMethods\InitialCode\" />
     <Folder Include="ReplaceConstructorsWithCreationMethods\MyWork\" />
+    <Folder Include="ChainConstructors\" />
+    <Folder Include="ChainConstructors\InitialCode\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
