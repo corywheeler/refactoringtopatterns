@@ -37,6 +37,7 @@
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
+    <Compile Include="ChainConstructors\MyWork\CapitalCalculationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -57,6 +58,7 @@
     <Folder Include="ReplaceConstructorsWithCreationMethods\MyWork\" />
     <Folder Include="ChainConstructors\" />
     <Folder Include="ChainConstructors\InitialCode\" />
+    <Folder Include="ChainConstructors\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

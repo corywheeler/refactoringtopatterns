@@ -35,9 +35,14 @@
     <Compile Include="InitialCode\CapitalStrategy.cs" />
     <Compile Include="InitialCode\TermROC.cs" />
     <Compile Include="InitialCode\RevolvingTermROC.cs" />
+    <Compile Include="MyWork\CapitalStrategy.cs" />
+    <Compile Include="MyWork\Loan.cs" />
+    <Compile Include="MyWork\RevolvingTermROC.cs" />
+    <Compile Include="MyWork\TermROC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
+    <Folder Include="MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
