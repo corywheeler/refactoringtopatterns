@@ -41,7 +41,7 @@ namespace ChainConstructors.InitialCode
             this._maturity = maturity;
         }
 
-		public CapitalStrategy Strategy
+		public CapitalStrategy CapitalStrategy
 		{
 			get
 			{
