@@ -11,13 +11,6 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-		public Loan(double commitment, double outstanding, 
-                    int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(null, commitment, outstanding, riskRating, maturity, expiry)
-		{
-
-		}
-
 		public Loan(CapitalStrategy capitalStrategy, double commitment,
 					int riskRating, DateTime? maturity, DateTime? expiry)
 			: this(capitalStrategy, commitment, 0.00, riskRating, maturity, expiry)
@@ -55,20 +48,14 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			}
 		}
 
-		public static Loan CreateRCTL(double commitment, double outstanding,
-						int riskRating, DateTime? maturity, DateTime? expiry)
-		{
-			return new Loan(commitment, outstanding, riskRating, maturity, expiry);
-		}
-
 		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
 		{
-            return new Loan(commitment, 0.00, riskRating, maturity, null);
+            return new Loan(null, commitment, 0.00, riskRating, maturity, null);
 		}
 
 		public static Loan CreateRevolver(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
 		{
-			return new Loan(commitment, 0.00, riskRating, maturity, expiry);
+			return new Loan(null, commitment, 0.00, riskRating, maturity, expiry);
 		}
 
         public static Loan CreateTermLoan(CapitalStrategy capitalStrategy, double commitment,
@@ -78,6 +65,12 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			return new Loan(capitalStrategy,
 							commitment, outstanding, riskRating,
 							maturity, null);
+		}
+
+		public static Loan CreateRCTL(double commitment, double outstanding,
+				int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(null, commitment, outstanding, riskRating, maturity, expiry);
 		}
 	}
 }
