@@ -50,12 +50,22 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         }
 
         [Test]
-        public void test_term_loan_with_risk_adjusted_capital_strategy() {
-            Loan loan = new Loan(_riskAdjustedCapitalStrategy, 
-                                 Commitment, Outstanding, RiskRating, 
-                                 _maturity, null);
-            
+        public void test_term_loan_with_risk_adjusted_capital_strategy()
+        {
+			Loan loan = createTermLoan(_riskAdjustedCapitalStrategy,
+                                       Commitment, Outstanding, RiskRating,
+                                       _maturity, null);
+
             Assert.IsInstanceOf(typeof(RiskAdjustedCapitalStrategy), loan.CapitalStrategy);
+        }
+
+		public static Loan createTermLoan(CapitalStrategy capitalStrategy, double commitment,
+					double outstanding, int riskRating,
+					DateTime? maturity, DateTime? expiry)
+        {
+            return new Loan(capitalStrategy,
+                            commitment, outstanding, riskRating,
+                            maturity, null);
         }
     }
 }
