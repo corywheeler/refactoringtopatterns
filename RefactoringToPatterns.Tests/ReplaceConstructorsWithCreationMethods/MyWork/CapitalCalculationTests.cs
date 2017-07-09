@@ -24,19 +24,14 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         [Test]
         public void test_term_loan_no_payments()
         {
-            Loan loan = createTermLoan(Commitment, RiskRating, _maturity);
+            Loan loan = Loan.createTermLoan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
-
-		public static Loan createTermLoan(double commitment, int riskRating, DateTime? maturity)
-		{
-			return new Loan(commitment, riskRating, maturity);
-		}
 
         [Test]
         public void test_term_loan_one_payment()
         {
-            Loan loan = new Loan(Commitment, RiskRating, _maturity);
+            Loan loan = Loan.createTermLoan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
