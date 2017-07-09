@@ -33,14 +33,6 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			}
 		}
 
-		public CapitalStrategy CapitalStrategy
-		{
-			get
-			{
-				return _capitalStrategy;
-			}
-		}
-
 		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
 		{
             return new Loan(null, commitment, 0.00, riskRating, maturity, null);
@@ -75,6 +67,14 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		int riskRating, DateTime? maturity, DateTime? expiry)
 		{
 			return new Loan(capitalStrategy, commitment, outstanding, riskRating, maturity, expiry);
+		}
+
+		public CapitalStrategy CapitalStrategy
+		{
+			get
+			{
+				return _capitalStrategy;
+			}
 		}
 	}
 }
