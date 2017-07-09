@@ -66,7 +66,12 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
             return new Loan(commitment, 0.00, riskRating, maturity, null);
 		}
 
-		public static Loan CreateTermLoan(CapitalStrategy capitalStrategy, double commitment,
+		public static Loan CreateRevolver(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(commitment, riskRating, maturity, expiry);
+		}
+
+        public static Loan CreateTermLoan(CapitalStrategy capitalStrategy, double commitment,
                                           double outstanding, int riskRating,
                             			  DateTime? maturity, DateTime? expiry)
 		{
