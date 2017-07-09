@@ -55,6 +55,12 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			}
 		}
 
+		public static Loan CreateRCTL(double commitment, double outstanding,
+						int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(commitment, outstanding, riskRating, maturity, expiry);
+		}
+
 		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
 		{
             return new Loan(commitment, 0.00, riskRating, maturity, null);
