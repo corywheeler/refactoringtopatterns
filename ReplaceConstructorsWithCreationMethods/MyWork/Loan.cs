@@ -11,12 +11,6 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-		public Loan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(commitment, 0.00, riskRating, maturity, expiry)
-		{
-
-		}
-
 		public Loan(double commitment, double outstanding, 
                     int riskRating, DateTime? maturity, DateTime? expiry)
 			: this(null, commitment, outstanding, riskRating, maturity, expiry)
@@ -68,7 +62,7 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 
 		public static Loan CreateRevolver(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
 		{
-			return new Loan(commitment, riskRating, maturity, expiry);
+			return new Loan(commitment, 0.00, riskRating, maturity, expiry);
 		}
 
         public static Loan CreateTermLoan(CapitalStrategy capitalStrategy, double commitment,
