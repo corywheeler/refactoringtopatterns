@@ -38,8 +38,13 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         [Test]
         public void test_revolver_loan_no_payments()
         {
-            Loan loan = new Loan(Commitment, RiskRating, null, _expiry);
+            Loan loan = CreateRevolver(Commitment, RiskRating, null, _expiry);
             Assert.IsInstanceOf(typeof(CapitalStrategyRevolver), loan.CapitalStrategy);
+        }
+
+        public static Loan CreateRevolver(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
+        {
+            return new Loan(commitment, riskRating, maturity, expiry);
         }
 
         [Test]
