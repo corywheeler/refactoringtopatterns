@@ -72,5 +72,11 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		{
 			return new Loan(null, commitment, outstanding, riskRating, maturity, expiry);
 		}
+
+		public static Loan CreateRCTL(CapitalStrategy capitalStrategy, double commitment, double outstanding,
+		int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(capitalStrategy, commitment, outstanding, riskRating, maturity, expiry);
+		}
 	}
 }
