@@ -24,14 +24,14 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         [Test]
         public void test_term_loan_no_payments()
         {
-            Loan loan = Loan.createTermLoan(Commitment, RiskRating, _maturity);
+            Loan loan = Loan.CreateTermLoan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
         [Test]
         public void test_term_loan_one_payment()
         {
-            Loan loan = Loan.createTermLoan(Commitment, RiskRating, _maturity);
+            Loan loan = Loan.CreateTermLoan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
@@ -52,7 +52,7 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         [Test]
         public void test_term_loan_with_risk_adjusted_capital_strategy()
         {
-			Loan loan = Loan.createTermLoan(_riskAdjustedCapitalStrategy,
+			Loan loan = Loan.CreateTermLoan(_riskAdjustedCapitalStrategy,
                                        Commitment, Outstanding, RiskRating,
                                        _maturity, null);
 

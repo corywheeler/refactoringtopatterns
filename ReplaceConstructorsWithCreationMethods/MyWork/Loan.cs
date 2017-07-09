@@ -61,12 +61,12 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			}
 		}
 
-		public static Loan createTermLoan(double commitment, int riskRating, DateTime? maturity)
+		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
 		{
             return new Loan(commitment, 0.00, riskRating, maturity, null);
 		}
 
-		public static Loan createTermLoan(CapitalStrategy capitalStrategy, double commitment,
+		public static Loan CreateTermLoan(CapitalStrategy capitalStrategy, double commitment,
                                           double outstanding, int riskRating,
                             			  DateTime? maturity, DateTime? expiry)
 		{
