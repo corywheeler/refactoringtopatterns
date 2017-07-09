@@ -45,8 +45,14 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         [Test]
         public void test_RCTL_loan_one_payment()
         {
-            Loan loan = new Loan(Commitment, Outstanding, RiskRating, _maturity, _expiry);
+            Loan loan = CreateRCTL(Commitment, Outstanding, RiskRating, _maturity, _expiry));
             Assert.IsInstanceOf(typeof(CapitalStrategyRCTL), loan.CapitalStrategy);
+        }
+
+		public static Loan CreateRCTL(double commitment, double outstanding,
+            					int riskRating, DateTime? maturity, DateTime? expiry)
+        {
+            return new Loan(commitment, outstanding, riskRating, maturity, expiry);
         }
 
         [Test]
