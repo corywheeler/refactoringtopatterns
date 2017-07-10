@@ -5,8 +5,15 @@ This repo contains source code that very closely or exactly matches that which i
 
 # Getting Around
 
-## Language
+## Language && IDE Concerns
 All code samples are written in C#, and therefor will follow C# coding conventions (versus any Java coding conventions you might see in the book).
+
+I have tested running this code in the following IDE's, and all seems to work fine:
+* [Visual Studio 2015 (on Windows)](https://www.visualstudio.com/vs/older-downloads/)
+* [Visual Studio Community 2017 (for Mac)](https://www.visualstudio.com/vs/visual-studio-mac/)
+* [Rider EAP versions (on Windows)](https://www.jetbrains.com/rider/)
+
+There might be an issue with Visual Studio 2017 (on Windows), but I've not been able to dig into it as of yet.
 
 ## Projects
 Each refactoring that he walks through has it's own project. For example, you will notice that there is a project titled "ReplaceConstructorsWithCreationMethods". This project corresponds to code he offers up on p. 57 in his section titled "Replace Constructors with Creation Methods"
