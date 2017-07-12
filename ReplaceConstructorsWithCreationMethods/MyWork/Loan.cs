@@ -11,7 +11,7 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-		public Loan(CapitalStrategy capitalStrategy, double commitment,
+		private Loan(CapitalStrategy capitalStrategy, double commitment,
 					double outstanding, int riskRating,
                     DateTime? maturity, DateTime? expiry)
 		{
@@ -47,6 +47,10 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		{
 			Loan loan = new Loan(new CapitalStrategyRCTL(), commitment, outstanding, riskRating, maturity, expiry);
 			return loan;
+		}
+		public static Loan CreateRiskAdjustedLoan(double commitment, double outstanding, int riskRating, DateTime? maturity)
+		{
+			return new Loan(new RiskAdjustedCapitalStrategy(), commitment, outstanding, riskRating, maturity, null);
 		}
 	}
 }

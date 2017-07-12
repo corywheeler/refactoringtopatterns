@@ -12,8 +12,6 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
 
         private const double Commitment = 3.0;
         private const double Outstanding = 12.9;
-        private RiskAdjustedCapitalStrategy _riskAdjustedCapitalStrategy = 
-            new RiskAdjustedCapitalStrategy();
         const int RiskRating = 5;
 
         [SetUp]
@@ -52,10 +50,7 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
 
 	    [Test]
         public void test_term_loan_with_risk_adjusted_capital_strategy() {
-            Loan loan = new Loan(_riskAdjustedCapitalStrategy, 
-                                 Commitment, Outstanding, RiskRating, 
-                                 _maturity, null);
-            
+            Loan loan = Loan.CreateRiskAdjustedLoan(Commitment, Outstanding, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(RiskAdjustedCapitalStrategy), loan.CapitalStrategy);
         }
     }
