@@ -33,24 +33,23 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 
 		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
 		{
-			Loan loan = new Loan(new CapitalStrategyTermLoan(), commitment, 0.00, riskRating, maturity, null);
-			return loan;
+			return new Loan(new CapitalStrategyTermLoan(), commitment, 0.00, riskRating, maturity, null);
 		}
 
 		public static Loan CreateRevolverLoan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
 		{
-			Loan loan = new Loan(new CapitalStrategyRevolver(), commitment, 0.00, riskRating, maturity, expiry);
-			return loan;
+			return new Loan(new CapitalStrategyRevolver(), commitment, 0.00, riskRating, maturity, expiry);
 		}
 
 		public static Loan CreateRCTLLoan(double commitment, double outstanding, int riskRating, DateTime? maturity, DateTime? expiry)
 		{
-			Loan loan = new Loan(new CapitalStrategyRCTL(), commitment, outstanding, riskRating, maturity, expiry);
-			return loan;
+			return new Loan(new CapitalStrategyRCTL(), commitment, outstanding, riskRating, maturity, expiry);
 		}
+
 		public static Loan CreateRiskAdjustedLoan(double commitment, double outstanding, int riskRating, DateTime? maturity)
 		{
 			return new Loan(new RiskAdjustedCapitalStrategy(), commitment, outstanding, riskRating, maturity, null);
 		}
+
 	}
 }
