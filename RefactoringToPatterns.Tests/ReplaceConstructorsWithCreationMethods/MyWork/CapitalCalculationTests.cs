@@ -1,6 +1,7 @@
 ﻿﻿using NUnit.Framework;
 using System;
-using ReplaceConstructorsWithCreationMethods.MyWork;
+﻿using System.Runtime.Remoting.Messaging;
+﻿using ReplaceConstructorsWithCreationMethods.MyWork;
 
 namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
 {
@@ -24,34 +25,34 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
         [Test]
         public void test_term_loan_no_payments()
         {
-            Loan loan = new Loan(Commitment, RiskRating, _maturity);
+            Loan loan = Loan.CreateTermLoan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
         [Test]
         public void test_term_loan_one_payment()
         {
-            Loan loan = new Loan(Commitment, RiskRating, _maturity);
+            Loan loan =  Loan.CreateTermLoan(Commitment, RiskRating, _maturity);
             Assert.IsInstanceOf(typeof(CapitalStrategyTermLoan), loan.CapitalStrategy);
         }
 
         [Test]
         public void test_revolver_loan_no_payments()
         {
-            Loan loan = new Loan(Commitment, RiskRating, null, _expiry);
+            Loan loan = Loan.CreateRevolverLoanTerm(Commitment, RiskRating, _expiry);
             Assert.IsInstanceOf(typeof(CapitalStrategyRevolver), loan.CapitalStrategy);
         }
 
-        [Test]
+		[Test]
         public void test_RCTL_loan_one_payment()
         {
-            Loan loan = new Loan(Commitment, Outstanding, RiskRating, _maturity, _expiry);
+            Loan loan = Loan.RCTLLoanOnePayment(Commitment, Outstanding, RiskRating, _maturity, _expiry);
             Assert.IsInstanceOf(typeof(CapitalStrategyRCTL), loan.CapitalStrategy);
         }
 
         [Test]
         public void test_term_loan_with_risk_adjusted_capital_strategy() {
-            Loan loan = new Loan(_riskAdjustedCapitalStrategy, 
+            Loan loan = Loan.TermLoanWithRiskAdjustedCapitalStrategy(_riskAdjustedCapitalStrategy, 
                                  Commitment, Outstanding, RiskRating, 
                                  _maturity, null);
             

@@ -11,32 +11,6 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-        public Loan(double commitment, int riskRating, DateTime? maturity)
-            : this(commitment, 0.00, riskRating, maturity, null)
-		{
-
-		}
-
-		public Loan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(commitment, 0.00, riskRating, maturity, expiry)
-		{
-
-		}
-
-		public Loan(double commitment, double outstanding, 
-                    int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(null, commitment, outstanding, riskRating, maturity, expiry)
-		{
-
-		}
-
-		public Loan(CapitalStrategy capitalStrategy, double commitment,
-					int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(capitalStrategy, commitment, 0.00, riskRating, maturity, expiry)
-		{
-
-		}
-
 		public Loan(CapitalStrategy capitalStrategy, double commitment,
 					double outstanding, int riskRating,
                     DateTime? maturity, DateTime? expiry)
@@ -57,6 +31,29 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 				else
 					this._capitalStrategy = new CapitalStrategyRCTL();
 			}
+		}
+
+		//CREATION METHOD to simplify constructors
+		//To ultimately delete the overloaded constructors, use the parameters in the instatiation of the new static method
+		//Page 62
+		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
+		{
+			return new Loan(null, commitment, 0, riskRating, maturity, null);
+		}
+
+		public static Loan CreateRevolverLoanTerm(double commitment, int riskRating, DateTime? expiry)
+		{
+			return new Loan(null, commitment, 0, riskRating, null, expiry);
+		}
+
+		public static Loan RCTLLoanOnePayment(double commitent, double outstanding, int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(null, 0.00, 0.00, riskRating, maturity, expiry);
+		}
+
+		public static Loan TermLoanWithRiskAdjustedCapitalStrategy(RiskAdjustedCapitalStrategy riskAdjustedCapitalStrategy, double commitment, double outstanding, int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(riskAdjustedCapitalStrategy, commitment, 0.00, riskRating, maturity, expiry);
 		}
 
 		public CapitalStrategy CapitalStrategy
