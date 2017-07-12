@@ -11,20 +11,6 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-		public Loan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(commitment, 0.00, riskRating, maturity, expiry)
-		{
-
-		}
-
-		public Loan(double commitment, double outstanding, 
-                    int riskRating, DateTime? maturity, DateTime? expiry)
-			: this(null, commitment, outstanding, riskRating, maturity, expiry)
-		{
-
-		}
-
-
 		public Loan(CapitalStrategy capitalStrategy, double commitment,
 					double outstanding, int riskRating,
                     DateTime? maturity, DateTime? expiry)
@@ -35,16 +21,6 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			this._maturity = maturity;
 			this._expiry = expiry;
 			this._capitalStrategy = capitalStrategy;
-
-			if (capitalStrategy == null)
-			{
-				if (expiry == null)
-					this._capitalStrategy = new CapitalStrategyTermLoan();
-				else if (maturity == null)
-					this._capitalStrategy = new CapitalStrategyRevolver();
-				else
-					this._capitalStrategy = new CapitalStrategyRCTL();
-			}
 		}
 
 		public CapitalStrategy CapitalStrategy
@@ -57,13 +33,16 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 
 		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
 		{
-			Loan loan = new Loan(commitment, 0.00, riskRating, maturity, null);
+			Loan loan = new Loan(new CapitalStrategyTermLoan(), commitment, 0.00, riskRating, maturity, null);
 			return loan;
 		}
 
 		public static Loan CreateRevolverLoan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
 		{
-			Loan loan = new Loan(commitment, 0.00, riskRating, maturity, expiry);
+			Loan loan = new Loan(new CapitalStrategyRevolver(), commitment, 0.00, riskRating, maturity, expiry);
+			return loan;
+		}
+
 		public static Loan CreateRCTLLoan(double commitment, double outstanding, int riskRating, DateTime? maturity, DateTime? expiry)
 		{
 			Loan loan = new Loan(new CapitalStrategyRCTL(), commitment, outstanding, riskRating, maturity, expiry);
