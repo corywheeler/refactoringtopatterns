@@ -66,5 +66,11 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 				return _capitalStrategy;
 			}
 		}
+
+		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
+		{
+			Loan loan = new Loan(commitment, riskRating, maturity);
+			return loan;
+		}
 	}
 }
