@@ -45,11 +45,12 @@ namespace RefactoringToPatterns.ReplaceConstructorsWithCreationMethods.MyWork
 	    [Test]
         public void test_RCTL_loan_one_payment()
         {
-            Loan loan = new Loan(Commitment, Outstanding, RiskRating, _maturity, _expiry);
+            Loan loan = Loan.CreateRCTLLoan(Commitment, Outstanding, RiskRating, _maturity, _expiry);
             Assert.IsInstanceOf(typeof(CapitalStrategyRCTL), loan.CapitalStrategy);
         }
 
-        [Test]
+
+	    [Test]
         public void test_term_loan_with_risk_adjusted_capital_strategy() {
             Loan loan = new Loan(_riskAdjustedCapitalStrategy, 
                                  Commitment, Outstanding, RiskRating, 
