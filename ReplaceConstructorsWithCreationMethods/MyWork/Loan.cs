@@ -11,7 +11,7 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-		public Loan(CapitalStrategy capitalStrategy, double commitment,
+		private Loan(CapitalStrategy capitalStrategy, double commitment,
 					double outstanding, int riskRating,
                     DateTime? maturity, DateTime? expiry)
 		{
