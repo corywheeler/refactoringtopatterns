@@ -38,6 +38,7 @@
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\MyWork\CapitalCalculationTests.cs" />
+    <Compile Include="EncapsulateClassesWithFactory\InitialCode\Mappers\DescriptorMapperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -51,6 +52,10 @@
       <Project>{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}</Project>
       <Name>ChainConstructors</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EncapsulateClassesWithFactory\EncapsulateClassesWithFactory.csproj">
+      <Project>{F2D41130-D1A6-4F83-8408-F02D6AAF279C}</Project>
+      <Name>EncapsulateClassesWithFactory</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ReplaceConstructorsWithCreationMethods\" />
@@ -59,6 +64,9 @@
     <Folder Include="ChainConstructors\" />
     <Folder Include="ChainConstructors\InitialCode\" />
     <Folder Include="ChainConstructors\MyWork\" />
+    <Folder Include="EncapsulateClassesWithFactory\" />
+    <Folder Include="EncapsulateClassesWithFactory\InitialCode\" />
+    <Folder Include="EncapsulateClassesWithFactory\InitialCode\Mappers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
