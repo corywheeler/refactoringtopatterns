@@ -17,58 +17,58 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.InitialCode.Mapper
         }
 
         [Test]
-        public void it_maps_remoteId_descriptor()
+        public void it_maps_remoteId_descriptor_as_DefaultDescriptor()
         {
             var remoteIdDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("remoteId");
             
-            Assert.NotNull(remoteIdDescriptor);
+            Assert.IsInstanceOf(typeof(DefaultDescriptor),remoteIdDescriptor);
         }
 
         [Test]
-		public void it_maps_createdDate_descriptor()
+		public void it_maps_createdDate_descriptor_as_DefaultDescriptor()
 		{
 			var createdDateDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("createdDate");
             
-			Assert.NotNull(createdDateDescriptor);
-		}
+		    Assert.IsInstanceOf(typeof(DefaultDescriptor), createdDateDescriptor);
+        }
 
 		[Test]
-		public void it_maps_lastChangedDate_descriptor()
+		public void it_maps_lastChangedDate_descriptor_as_DefaultDescriptor()
 		{
 			var lastChangedDateDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("lastChangedDate");
             
-			Assert.NotNull(lastChangedDateDescriptor);
-		}
+		    Assert.IsInstanceOf(typeof(DefaultDescriptor), lastChangedDateDescriptor);
+        }
 
 		[Test]
-		public void it_maps_createdBy_descriptor()
+		public void it_maps_createdBy_descriptor_as_ReferenceDescriptor()
 		{
             var createdByDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("createdBy");
             
-			Assert.NotNull(createdByDescriptor);
-		}
+		    Assert.IsInstanceOf(typeof(ReferenceDescriptor), createdByDescriptor);
+        }
 
 		[Test]
-		public void it_maps_lastChangedBy_descriptor()
+		public void it_maps_lastChangedBy_descriptor_ReferenceDescriptor()
 		{
 			var lastChangedByDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("lastChangedBy");
             
-			Assert.NotNull(lastChangedByDescriptor);
-		}
+		    Assert.IsInstanceOf(typeof(ReferenceDescriptor), lastChangedByDescriptor);
+        }
 
 		[Test]
-		public void it_maps_optimisticLockVersion_descriptor()
+		public void it_maps_optimisticLockVersion_descriptor_as_DefaultDescriptor()
 		{
 			var optimisticLockVersionDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("optimisticLockVersion");
             
-			Assert.NotNull(optimisticLockVersionDescriptor);
-		}
+		    Assert.IsInstanceOf(typeof(DefaultDescriptor), optimisticLockVersionDescriptor);
+        }
 
 		[Test]
 		public void it_does_not_map_unknown_descriptors()
