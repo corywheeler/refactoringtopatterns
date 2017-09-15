@@ -37,7 +37,7 @@ You will also notice that within the "ReplaceConstructorsWithCreationMethods" th
 ### MyWork folder
 There is also a folder titled "MyWork". This folder initially carries an exact copy of what's in the "InitialCode" folder. However, the intention of the "MyWork" folder is that it is a place for you to experiment with in implementing the refactoring. In this way, once you have implemented the refactoring, you have the ability to look at both the initial problem and the refactored solution and weigh the benefits of one pattern (or lack thereof) and the code refactored to or towards a pattern.
 
-## RefactoringToPatterns.Tests Project
+### RefactoringToPatterns.Tests Project
 
 This project also contains sections for each refactoring, but it differs from what I meantioned before in that it has unit tests that in
 some way excercise the code found in the implemented code project.
