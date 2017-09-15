@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -34,6 +34,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
@@ -57,16 +58,6 @@
       <Name>EncapsulateClassesWithFactory</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ReplaceConstructorsWithCreationMethods\" />
-    <Folder Include="ReplaceConstructorsWithCreationMethods\InitialCode\" />
-    <Folder Include="ReplaceConstructorsWithCreationMethods\MyWork\" />
-    <Folder Include="ChainConstructors\" />
-    <Folder Include="ChainConstructors\InitialCode\" />
-    <Folder Include="ChainConstructors\MyWork\" />
-    <Folder Include="EncapsulateClassesWithFactory\" />
-    <Folder Include="EncapsulateClassesWithFactory\InitialCode\" />
-    <Folder Include="EncapsulateClassesWithFactory\InitialCode\Mappers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

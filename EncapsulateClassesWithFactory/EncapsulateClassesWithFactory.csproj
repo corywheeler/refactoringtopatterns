@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -24,11 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="InitialCode\" />
-    <Folder Include="InitialCode\Descriptors\" />
-    <Folder Include="InitialCode\Mappers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="InitialCode\Descriptors\AttributeDescriptor.cs" />
     <Compile Include="InitialCode\Descriptors\BooleanDescriptor.cs" />
@@ -36,6 +32,12 @@
     <Compile Include="InitialCode\Descriptors\ReferenceDescriptor.cs" />
     <Compile Include="InitialCode\Descriptors\User.cs" />
     <Compile Include="InitialCode\Mappers\DescriptorMapper.cs" />
+    <Compile Include="MyWork\Descriptors\AttributeDescriptor.cs" />
+    <Compile Include="MyWork\Descriptors\BooleanDescriptor.cs" />
+    <Compile Include="MyWork\Descriptors\DefaultDescriptor.cs" />
+    <Compile Include="MyWork\Descriptors\ReferenceDescriptor.cs" />
+    <Compile Include="MyWork\Descriptors\User.cs" />
+    <Compile Include="MyWork\Mappers\DescriptorMapper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
