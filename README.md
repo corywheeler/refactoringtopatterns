@@ -3,7 +3,7 @@ A place to practice Refactoring To Patterns that Kerievsky wrote about in his bo
 
 This repo contains source code that very closely or exactly matches that which is found in Joshua Kerievsky's book [Refactoring to Patterns](https://www.amazon.com/Refactoring-Patterns-Joshua-Kerievsky/dp/0321213351).
 
-Have to say thank you to Joshua for putting all of these patterns together and for making them easily consumable. If you have landed here and are interested in Joshua I encourage you to check out the following links:
+Have to say thank you to Joshua for putting all of these patterns together and for making them easily consumable. If you have landed here and are interested in other things [Joshua](https://www.industriallogic.com/people/joshua) has put out, I encourage you to check out the following links:
 
 * [Industrial Logic](https://www.industriallogic.com/) - His consultancy and source of some great e-Learnin.
 * [Modern Agile](http://modernagile.org/) - A community for people interested in better ways of building software.
