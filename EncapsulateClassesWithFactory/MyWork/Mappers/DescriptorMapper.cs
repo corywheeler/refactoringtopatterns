@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using EncapsulateClassesWithFactory.MyWork.Descriptors;
+using EncapsulateClassesWithFactory.MyWork.Domain;
 
 namespace EncapsulateClassesWithFactory.MyWork.Mappers
 {

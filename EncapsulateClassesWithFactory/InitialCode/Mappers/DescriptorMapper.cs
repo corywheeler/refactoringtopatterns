@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using EncapsulateClassesWithFactory.InitialCode.Descriptors;
+using EncapsulateClassesWithFactory.InitialCode.Domain;
 
 namespace EncapsulateClassesWithFactory.InitialCode.Mappers
 {
