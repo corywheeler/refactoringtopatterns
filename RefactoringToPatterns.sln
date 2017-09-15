@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceConstructorsWithCrea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainConstructors", "ChainConstructors\ChainConstructors.csproj", "{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulateClassesWithFactory", "EncapsulateClassesWithFactory\EncapsulateClassesWithFactory.csproj", "{F2D41130-D1A6-4F83-8408-F02D6AAF279C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
