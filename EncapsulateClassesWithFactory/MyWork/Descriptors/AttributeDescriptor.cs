@@ -33,25 +33,25 @@ namespace EncapsulateClassesWithFactory.MyWork.Descriptors
             return new ReferenceDescriptor(descriptorName, mapperType, typeof(User));
         }
 
-        internal class ReferenceDescriptor : AttributeDescriptor
+        public class ReferenceDescriptor : AttributeDescriptor
         {
-            internal ReferenceDescriptor(string descriptorName, Type mapperType, Type forType)
+            public ReferenceDescriptor(string descriptorName, Type mapperType, Type forType)
                 : base(descriptorName, mapperType, forType)
             {
             }
         }
 
-        internal class DefaultDescriptor : AttributeDescriptor
+        public class DefaultDescriptor : AttributeDescriptor
         {
-            internal DefaultDescriptor(string descriptorName, Type mapperType, Type forType)
+            public DefaultDescriptor(string descriptorName, Type mapperType, Type forType)
                 : base(descriptorName, mapperType, forType)
             {
             }
         }
 
-        internal class BooleanDescriptor : AttributeDescriptor
+        public class BooleanDescriptor : AttributeDescriptor
         {
-            internal BooleanDescriptor(string descriptorName, Type mapperType, Type forType)
+            public BooleanDescriptor(string descriptorName, Type mapperType, Type forType)
                 : base(descriptorName, mapperType, forType)
             {
             }
