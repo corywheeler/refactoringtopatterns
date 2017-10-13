@@ -9,18 +9,13 @@ namespace EncapsulateClassesWithFactory.MyWork.Mappers
         protected List<AttributeDescriptor> CreateAttributeDescriptors() {
             var result = new List<AttributeDescriptor>();
 
-            result.Add(AttributeDescriptor.ForInteger("remoteId", GetClass()));
-            result.Add(AttributeDescriptor.ForDate("createdDate", GetClass()));
-            result.Add(AttributeDescriptor.ForDate("lastChangedDate", GetClass()));
-            result.Add(AttributeDescriptor.ForUser("createdBy", GetClass()));
-            result.Add(AttributeDescriptor.ForUser("lastChangedBy", GetClass()));
-            result.Add(AttributeDescriptor.ForInteger("optimisticLockVersion", GetClass()));
+            result.Add(AttributeDescriptor.ForInteger("remoteId", GetType()));
+            result.Add(AttributeDescriptor.ForDate("createdDate", GetType()));
+            result.Add(AttributeDescriptor.ForDate("lastChangedDate", GetType()));
+            result.Add(AttributeDescriptor.ForUser("createdBy", GetType()));
+            result.Add(AttributeDescriptor.ForUser("lastChangedBy", GetType()));
+            result.Add(AttributeDescriptor.ForInteger("optimisticLockVersion", GetType()));
             return result;
-        }
-
-        private static Type GetClass()
-        {
-            return typeof(DescriptorMapper);
         }
     }
 }
