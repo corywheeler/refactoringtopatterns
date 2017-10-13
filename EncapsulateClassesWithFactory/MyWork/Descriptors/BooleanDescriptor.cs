@@ -6,7 +6,7 @@ namespace EncapsulateClassesWithFactory.MyWork.Descriptors
     {
 
 
-        public BooleanDescriptor(string descriptorName, Type mapperType, Type forType) 
+        internal BooleanDescriptor(string descriptorName, Type mapperType, Type forType) 
             : base(descriptorName, mapperType, forType)
         {
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using EncapsulateClassesWithFactory.MyWork.Descriptors;
-using EncapsulateClassesWithFactory.MyWork.Domain;
 
 namespace EncapsulateClassesWithFactory.MyWork.Mappers
 {
@@ -10,16 +9,16 @@ namespace EncapsulateClassesWithFactory.MyWork.Mappers
         protected List<AttributeDescriptor> CreateAttributeDescriptors() {
             var result = new List<AttributeDescriptor>();
 
-            result.Add(new DefaultDescriptor("remoteId", GetClass(), typeof(int)));
-            result.Add(new DefaultDescriptor("createdDate", GetClass(), typeof(DateTime)));
-            result.Add(new DefaultDescriptor("lastChangedDate", GetClass(), typeof(DateTime)));
-            result.Add(new ReferenceDescriptor("createdBy", GetClass(), typeof(User)));
-            result.Add(new ReferenceDescriptor("lastChangedBy", GetClass(), typeof(User)));
-            result.Add(new DefaultDescriptor("optimisticLockVersion", GetClass(), typeof(int)));
+            result.Add(AttributeDescriptor.ForInteger("remoteId", GetClass()));
+            result.Add(AttributeDescriptor.ForDate("createdDate", GetClass()));
+            result.Add(AttributeDescriptor.ForDate("lastChangedDate", GetClass()));
+            result.Add(AttributeDescriptor.ForUser("createdBy", GetClass()));
+            result.Add(AttributeDescriptor.ForUser("lastChangedBy", GetClass()));
+            result.Add(AttributeDescriptor.ForInteger("optimisticLockVersion", GetClass()));
             return result;
         }
 
-        private Type GetClass()
+        private static Type GetClass()
         {
             return typeof(DescriptorMapper);
         }
