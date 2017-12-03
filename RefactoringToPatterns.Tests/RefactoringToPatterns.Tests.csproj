@@ -40,7 +40,6 @@
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="EncapsulateClassesWithFactory\InitialCode\Mappers\DescriptorMapperTests.cs" />
-    <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\DoesItWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
