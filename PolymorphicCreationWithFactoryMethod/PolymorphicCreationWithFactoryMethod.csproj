@@ -31,6 +31,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InitialCode\PleaseWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InitialCode\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
