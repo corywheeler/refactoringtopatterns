@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainConstructors", "ChainC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulateClassesWithFactory", "EncapsulateClassesWithFactory\EncapsulateClassesWithFactory.csproj", "{F2D41130-D1A6-4F83-8408-F02D6AAF279C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicCreationWithFactoryMethod", "PolymorphicCreationWithFactoryMethod\PolymorphicCreationWithFactoryMethod.csproj", "{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2D41130-D1A6-4F83-8408-F02D6AAF279C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
