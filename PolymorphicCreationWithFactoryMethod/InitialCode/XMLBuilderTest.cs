@@ -2,11 +2,9 @@
 {
     public class XMLBuilderTest: TestCase
     {
-		private OutputBuilder builder;
+        public OutputBuilder Builder { get; private set; }
 
-		public OutputBuilder Builder { get => builder; private set => builder = value; }
-
-		public void TestAddAboveRoot()
+        public void TestAddAboveRoot()
 		{
 			string invalidResult =
 				"<orders>" +
@@ -16,13 +14,13 @@
 				"<customer>" +
 				"</customer>";
 
-			builder = new XMLBuilder();
+			Builder = new XMLBuilder();
 
-			builder.AddBelow("order");
+			Builder.AddBelow("order");
 
 			try
 			{
-				builder.AddAbove("customer");
+				Builder.AddAbove("customer");
 				Fail("expecting RuntimeException");
 			}
 			catch (RuntimeException ignored)

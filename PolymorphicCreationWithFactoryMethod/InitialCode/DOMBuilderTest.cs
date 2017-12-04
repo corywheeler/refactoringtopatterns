@@ -2,9 +2,7 @@
 {
     public class DOMBuilderTest: TestCase
     {
-        private OutputBuilder builder;
-
-        public OutputBuilder Builder { get => builder; private set => builder = value; }
+        public OutputBuilder Builder { get; private set; }
 
         public void TestAddAboveRoot()
         {
@@ -16,13 +14,13 @@
                 "<customer>" +
                 "</customer>";
 
-            builder = new DOMBuilder();
+            Builder = new DOMBuilder();
 
-            builder.AddBelow("order");
+            Builder.AddBelow("order");
 
             try
             {
-                builder.AddAbove("customer");
+                Builder.AddAbove("customer");
                 Fail("expecting RuntimeException");
             }
             catch (RuntimeException ignored)
