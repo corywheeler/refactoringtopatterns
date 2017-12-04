@@ -1,6 +1,6 @@
 ﻿namespace PolymorphicCreationWithFactoryMethod.InitialCode
 {
-    public class DOMBuilderTest : TestCase
+    public class DOMBuilderTest: TestCase
     {
         private OutputBuilder builder;
 

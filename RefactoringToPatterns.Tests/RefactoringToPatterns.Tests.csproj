@@ -41,6 +41,7 @@
     <Compile Include="ChainConstructors\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="EncapsulateClassesWithFactory\InitialCode\Mappers\DescriptorMapperTests.cs" />
     <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\DomBuilderTestTests.cs" />
+    <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\XMLBuilderTestTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

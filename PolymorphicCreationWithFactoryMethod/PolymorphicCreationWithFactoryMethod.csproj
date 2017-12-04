@@ -36,6 +36,8 @@
     <Compile Include="InitialCode\OutputBuilder.cs" />
     <Compile Include="InitialCode\DOMBuilder.cs" />
     <Compile Include="InitialCode\RuntimeException.cs" />
+    <Compile Include="InitialCode\XMLBuilderTest.cs" />
+    <Compile Include="InitialCode\XMLBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
