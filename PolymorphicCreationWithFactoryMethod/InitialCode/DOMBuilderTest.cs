@@ -1,6 +1,6 @@
 ﻿namespace PolymorphicCreationWithFactoryMethod.InitialCode
 {
-    public class DomBuilderTest : TestCase
+    public class DOMBuilderTest : TestCase
     {
         private OutputBuilder builder;
 
@@ -23,7 +23,7 @@
             try
             {
                 builder.AddAbove("customer");
-                Fail("expecting PolymorphicCreationWithFactoryMethod RuntimeException");
+                Fail("expecting RuntimeException");
             }
             catch (RuntimeException ignored)
             {

@@ -31,9 +31,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="InitialCode\DomBuilderTest.cs" />
+    <Compile Include="InitialCode\DOMBuilderTest.cs" />
     <Compile Include="InitialCode\TestCase.cs" />
     <Compile Include="InitialCode\OutputBuilder.cs" />
+    <Compile Include="InitialCode\DOMBuilder.cs" />
+    <Compile Include="InitialCode\RuntimeException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
