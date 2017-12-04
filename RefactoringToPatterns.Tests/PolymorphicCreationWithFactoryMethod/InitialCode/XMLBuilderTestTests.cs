@@ -5,19 +5,19 @@ namespace RefactoringToPatterns.PolymorphicCreationWithFactoryMethod.InitialCode
     [TestFixture()]
     public class XMLBuilderTestTests
     {
-        XMLBuilderTest xmlBuilderTest;
+        XMLBuilderTest _xmlBuilderTest;
 
 		[SetUp]
 		public void Init()
 		{
-			xmlBuilderTest = new XMLBuilderTest();
-			xmlBuilderTest.TestAddAboveRoot();
+			_xmlBuilderTest = new XMLBuilderTest();
+			_xmlBuilderTest.TestAddAboveRoot();
 		}
 
 		[Test]
 		public void test_XMLBuilderTest_has_an_XMLBuilder()
 		{
-			Assert.IsInstanceOf(typeof(XMLBuilder), xmlBuilderTest.Builder);
+			Assert.IsInstanceOf(typeof(XMLBuilder), _xmlBuilderTest.Builder);
 		}
     }
 }

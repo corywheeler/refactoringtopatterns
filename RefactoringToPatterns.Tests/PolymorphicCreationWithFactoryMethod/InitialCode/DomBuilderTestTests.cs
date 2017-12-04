@@ -6,19 +6,19 @@ namespace RefactoringToPatterns.PolymorphicCreationWithFactoryMethod.InitialCode
     [TestFixture]
     public class DOMBuilderTestTests
     {
-		DOMBuilderTest domBuilderTest;
+		DOMBuilderTest _domBuilderTest;
 
 		[SetUp]
 		public void Init()
 		{
-            domBuilderTest = new DOMBuilderTest();
-            domBuilderTest.TestAddAboveRoot();
+            _domBuilderTest = new DOMBuilderTest();
+            _domBuilderTest.TestAddAboveRoot();
         }
 
         [Test]
         public void test_DOMBuilderTest_has_a_DOMBuilder()
         {
-            Assert.IsInstanceOf(typeof(DOMBuilder), domBuilderTest.Builder);
+            Assert.IsInstanceOf(typeof(DOMBuilder), _domBuilderTest.Builder);
         }
     }
 }
