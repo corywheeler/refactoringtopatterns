@@ -14,7 +14,7 @@
                 "<customer>" +
                 "</customer>";
 
-            Builder = new DOMBuilder();
+            Builder = new DOMBuilder("orders");
 
             Builder.AddBelow("order");
 

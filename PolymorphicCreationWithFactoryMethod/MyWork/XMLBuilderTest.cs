@@ -14,7 +14,7 @@
 				"<customer>" +
 				"</customer>";
 
-			Builder = new XMLBuilder();
+			Builder = new XMLBuilder("orders");
 
 			Builder.AddBelow("order");
 
