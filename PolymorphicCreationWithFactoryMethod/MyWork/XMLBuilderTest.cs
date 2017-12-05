@@ -4,6 +4,11 @@
     {
         public OutputBuilder Builder { get; private set; }
 
+        protected OutputBuilder CreateBuilder(string rootName)
+        {
+            return new XMLBuilder(rootName);
+        }
+
         public void TestAddAboveRoot()
 		{
 			string invalidResult =
@@ -14,7 +19,7 @@
 				"<customer>" +
 				"</customer>";
 
-			Builder = new XMLBuilder("orders");
+			Builder = CreateBuilder("orders");
 
 			Builder.AddBelow("order");
 
