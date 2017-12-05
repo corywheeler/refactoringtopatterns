@@ -38,9 +38,17 @@
     <Compile Include="InitialCode\RuntimeException.cs" />
     <Compile Include="InitialCode\XMLBuilderTest.cs" />
     <Compile Include="InitialCode\XMLBuilder.cs" />
+    <Compile Include="MyWork\DOMBuilder.cs" />
+    <Compile Include="MyWork\DOMBuilderTest.cs" />
+    <Compile Include="MyWork\OutputBuilder.cs" />
+    <Compile Include="MyWork\RuntimeException.cs" />
+    <Compile Include="MyWork\TestCase.cs" />
+    <Compile Include="MyWork\XMLBuilder.cs" />
+    <Compile Include="MyWork\XMLBuilderTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
+    <Folder Include="MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

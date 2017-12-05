@@ -42,6 +42,8 @@
     <Compile Include="EncapsulateClassesWithFactory\InitialCode\Mappers\DescriptorMapperTests.cs" />
     <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\DomBuilderTestTests.cs" />
     <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\XMLBuilderTestTests.cs" />
+    <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\DomBuilderTestTests.cs" />
+    <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\XMLBuilderTestTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -68,6 +70,7 @@
   <ItemGroup>
     <Folder Include="PolymorphicCreationWithFactoryMethod\" />
     <Folder Include="PolymorphicCreationWithFactoryMethod\InitialCode\" />
+    <Folder Include="PolymorphicCreationWithFactoryMethod\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
