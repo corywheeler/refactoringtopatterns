@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -31,6 +31,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyWork\AbstractBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InitialCode\DOMBuilderTest.cs" />
     <Compile Include="InitialCode\TestCase.cs" />
@@ -47,9 +48,6 @@
     <Compile Include="MyWork\XMLBuilder.cs" />
     <Compile Include="MyWork\XMLBuilderTest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InitialCode\" />
-    <Folder Include="MyWork\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

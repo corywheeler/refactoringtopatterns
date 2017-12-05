@@ -1,6 +1,6 @@
 ﻿namespace PolymorphicCreationWithFactoryMethod.MyWork
 {
-    public class XMLBuilderTest: TestCase
+    public class XMLBuilderTest: AbstractBuilderTest
     {
         public OutputBuilder Builder { get; private set; }
 
