@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using PolymorphicCreationWithFactoryMethod.InitialCode;
+using PolymorphicCreationWithFactoryMethod.MyWork;
 
-namespace RefactoringToPatterns.PolymorphicCreationWithFactoryMethod.InitialCode
+namespace RefactoringToPatterns.PolymorphicCreationWithFactoryMethod.MyWork
 {
     [TestFixture()]
     public class XMLBuilderTestTests
