@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulateClassesWithFacto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicCreationWithFactoryMethod", "PolymorphicCreationWithFactoryMethod\PolymorphicCreationWithFactoryMethod.csproj", "{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceConditionalLogicWithStrategy", "ReplaceConditionalLogicWithStrategy\ReplaceConditionalLogicWithStrategy.csproj", "{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +39,9 @@ Global
 		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
