@@ -14,10 +14,22 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private readonly DateTime _start;
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
-        private readonly double _riskRating = 5.0;
+        private readonly double _riskRating;
+        private double _loanAmount;
 
-        public Loan()
+     
+
+        public Loan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
         {
+            this._loanAmount = loanAmount;
+            this._start = start;
+            this._maturity = maturity;
+            this._riskRating = riskRating;
+        }
+
+        public static Loan CreateTermLoan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
+        {
+            return new Loan(loanAmount, start, maturity, riskRating);
         }
 
         public double Capital() {
