@@ -2,6 +2,10 @@
 {
     public class RiskFactor
     {
+        private RiskFactor() {
+
+        }
+
         public static RiskFactor GetFactors()
         {
             return new RiskFactor();

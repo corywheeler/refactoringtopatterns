@@ -34,6 +34,7 @@
     <Compile Include="InitialCode\Loan.cs" />
     <Compile Include="InitialCode\Payment.cs" />
     <Compile Include="InitialCode\RiskFactor.cs" />
+    <Compile Include="InitialCode\UnusedRiskFactors.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />

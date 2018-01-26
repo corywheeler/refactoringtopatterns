@@ -14,7 +14,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private readonly DateTime _start;
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
-        private readonly double _riskRating;
+        private readonly double _riskRating = 5.0;
 
         public Loan()
         {
@@ -92,7 +92,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         private double UnusedRiskFactor()
         {
-            return 1.0;
+            return UnusedRiskFactors.GetFactors().ForRating(_riskRating);
         }
 
         private double OutstandingRiskAmount()
