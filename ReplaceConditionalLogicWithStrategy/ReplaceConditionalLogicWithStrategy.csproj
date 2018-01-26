@@ -31,6 +31,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InitialCode\Loan.cs" />
+    <Compile Include="InitialCode\Payment.cs" />
+    <Compile Include="InitialCode\RiskFactor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InitialCode\" />
+    <Folder Include="MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
