@@ -17,7 +17,7 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
         }
 
         [Test()]
-        public void TestTermLoanSamePayments()
+        public void test_term_loan_same_payments()
         {
             DateTime start = November(20, 2003);
             DateTime maturity = November(20, 2006);
@@ -27,12 +27,12 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
             termLoan.Payment(1000.00, November(20, 2005));
             termLoan.Payment(1000.00, November(20, 2006));
 
-            Assert.AreEqual(2.0, termLoan.Duration(), TWO_DIGIT_PRECISION);
+            Assert.AreEqual(20027, termLoan.Duration(), TWO_DIGIT_PRECISION);
         }
 
         private static DateTime November(int dayOfMonth, int year)
         {
-            return new DateTime(2003, 11, 20);
+            return new DateTime(year, 11, dayOfMonth);
         }
     }
 }

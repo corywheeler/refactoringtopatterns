@@ -5,23 +5,24 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 {
     public class Loan
     {
-        double _commitment;
+        double _commitment = 1.0;
         private DateTime? _expiry;
         private DateTime? _maturity;
         private double _outstanding;
         IList<Payment> _payments = new List<Payment>();
-        private readonly DateTime today = DateTime.Now;
-        private readonly DateTime _start;
+        private DateTime? _today = DateTime.Now;
+        private DateTime _start;
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
-        private readonly double _riskRating;
+        private double _riskRating;
         private double _loanAmount;
 
      
 
-        public Loan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
+        public Loan(double loanAmount, DateTime? today, DateTime start, DateTime maturity, int riskRating)
         {
             this._loanAmount = loanAmount;
+            this._today = today;
             this._start = start;
             this._maturity = maturity;
             this._riskRating = riskRating;
@@ -34,7 +35,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         public static Loan NewTermLoan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
         {
-            return new Loan(loanAmount, start, maturity, riskRating);
+            return new Loan(loanAmount, null, start, maturity, riskRating);
         }
 
         public double Capital() {
@@ -90,8 +91,8 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         private double YearsTo(DateTime? endDate)
         {
-            DateTime beginDate = (today == null ? _start : today);
-            return (double)((endDate?.Ticks - beginDate.Ticks) / MILLIS_PER_DAY / DAYS_PER_YEAR);
+            DateTime? beginDate = (_today == null ? _start : _today);
+            return (double)((endDate?.Ticks - beginDate?.Ticks) / MILLIS_PER_DAY / DAYS_PER_YEAR);
         }
 
         private double RiskFactor()

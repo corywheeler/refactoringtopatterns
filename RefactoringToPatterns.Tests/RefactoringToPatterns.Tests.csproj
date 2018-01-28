@@ -45,6 +45,7 @@
     <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\DomBuilderTestTests.cs" />
     <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\XMLBuilderTestTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\LoanTests.cs" />
+    <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\PaymentTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
