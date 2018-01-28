@@ -15,13 +15,10 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
         private double _riskRating;
-        private double _loanAmount;
 
-     
-
-        public Loan(double loanAmount, DateTime? today, DateTime start, DateTime maturity, int riskRating)
+        public Loan(double commitment, DateTime? today, DateTime start, DateTime maturity, int riskRating)
         {
-            this._loanAmount = loanAmount;
+            this._commitment = commitment;
             this._today = today;
             this._start = start;
             this._maturity = maturity;
@@ -33,9 +30,9 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             _payments.Add(new Payment(amount, paymentDate));
         }
 
-        public static Loan NewTermLoan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
+        public static Loan NewTermLoan(double commitment, DateTime start, DateTime maturity, int riskRating)
         {
-            return new Loan(loanAmount, null, start, maturity, riskRating);
+            return new Loan(commitment, null, start, maturity, riskRating);
         }
 
         public double Capital() {

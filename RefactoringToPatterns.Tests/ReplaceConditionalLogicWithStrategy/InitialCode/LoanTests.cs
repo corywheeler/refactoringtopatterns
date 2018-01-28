@@ -9,7 +9,7 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
     {
         private readonly int HIGH_RISK_TAKING = 5;
         private readonly double LOAN_AMOUNT = 10000.00;
-        private readonly double TWO_DIGIT_PRECISION = 0.1;
+        private readonly double TWO_DIGIT_PRECISION = 0.001;
 
         [SetUp]
         public void Init() {
@@ -27,7 +27,10 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
             termLoan.Payment(1000.00, November(20, 2005));
             termLoan.Payment(1000.00, November(20, 2006));
 
-            Assert.AreEqual(20027, termLoan.Duration(), TWO_DIGIT_PRECISION);
+            Assert.Multiple(() => {
+                Assert.AreEqual(20027, termLoan.Duration(), TWO_DIGIT_PRECISION);
+                Assert.AreEqual(6008100, termLoan.Capital(), TWO_DIGIT_PRECISION);
+            });
         }
 
         private static DateTime November(int dayOfMonth, int year)
