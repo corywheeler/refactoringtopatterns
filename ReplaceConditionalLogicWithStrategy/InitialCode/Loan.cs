@@ -16,10 +16,10 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private long DAYS_PER_YEAR = 365;
         private double _riskRating;
 
-        public Loan(double commitment, DateTime? today, DateTime start, DateTime maturity, int riskRating)
+        public Loan(double commitment, DateTime start, DateTime maturity, int riskRating)
         {
             this._commitment = commitment;
-            this._today = today;
+            this._today = null;
             this._start = start;
             this._maturity = maturity;
             this._riskRating = riskRating;
@@ -32,7 +32,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         public static Loan NewTermLoan(double commitment, DateTime start, DateTime maturity, int riskRating)
         {
-            return new Loan(commitment, null, start, maturity, riskRating);
+            return new Loan(commitment, start, maturity, riskRating);
         }
 
         public double Capital() {
