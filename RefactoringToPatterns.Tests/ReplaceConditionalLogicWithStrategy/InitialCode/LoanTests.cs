@@ -33,6 +33,24 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
             });
         }
 
+        [Test()]
+        public void test_revolver_loan_same_payments()
+        {
+            DateTime start = November(20, 2003);
+            DateTime maturity = November(20, 2006);
+            DateTime expiry = November(20, 2007);
+
+            Loan termLoan = Loan.NewRevolver(LOAN_AMOUNT, start, expiry, maturity, HIGH_RISK_TAKING);
+            termLoan.Payment(1000.00, November(20, 2004));
+            termLoan.Payment(1000.00, November(20, 2005));
+            termLoan.Payment(1000.00, November(20, 2006));
+
+            Assert.Multiple(() => {
+                Assert.AreEqual(40027, termLoan.Duration(), TWO_DIGIT_PRECISION);
+                Assert.AreEqual(4002700, termLoan.Capital(), TWO_DIGIT_PRECISION);
+            });
+        }
+
         private static DateTime November(int dayOfMonth, int year)
         {
             return new DateTime(year, 11, dayOfMonth);

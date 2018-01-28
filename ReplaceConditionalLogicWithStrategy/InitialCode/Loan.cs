@@ -16,7 +16,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private long DAYS_PER_YEAR = 365;
         private double _riskRating;
 
-        public Loan(double commitment, double notSureWhatThisIs, DateTime start, DateTime? expiry, DateTime maturity, int riskRating)
+        public Loan(double commitment, double notSureWhatThisIs, DateTime start, DateTime? expiry, DateTime? maturity, int riskRating)
         {
             this._expiry = expiry;
             this._commitment = commitment;
@@ -32,10 +32,10 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
                             maturity, riskRating);
         }
 
-        public static Loan NewRevolver(double commitment, DateTime start, DateTime maturity, int riskRating) 
+        public static Loan NewRevolver(double commitment, DateTime start, DateTime expiry, DateTime maturity, int riskRating) 
         {
-            return new Loan(commitment, 0, start, null,
-                            maturity, riskRating);
+            return new Loan(commitment, 0, start, expiry,
+                            null, riskRating);
         }
 
         public void Payment(double amount, DateTime paymentDate)
@@ -48,9 +48,11 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
                 return _commitment * Duration() * RiskFactor();
             if(_expiry != null && _maturity == null) {
                 if(GetUnusedPercentage() != 1.0) {
+                    // THIS IS FOR ADVISED LINE
                     return _commitment * GetUnusedPercentage() * Duration() * RiskFactor();
                 }
                 else {
+                    // THIS IS FOR REVOLVER
                     return (OutstandingRiskAmount() * Duration() * RiskFactor())
                         + (UnusedRiskAmount() * Duration() * UnusedRiskFactor());
                 }
@@ -67,6 +69,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             }
             else if (_expiry != null && _maturity == null)
             {
+                // SHOULD HIT HERE FOR REVOLVER AND ADVISED LINE
                 return YearsTo(_expiry);
             }
             return 0.0;
