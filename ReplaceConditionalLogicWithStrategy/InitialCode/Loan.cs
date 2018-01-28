@@ -9,7 +9,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private DateTime? _expiry;
         private DateTime? _maturity;
         private double _outstanding;
-        IList<Payment> _payments;
+        IList<Payment> _payments = new List<Payment>();
         private readonly DateTime today = DateTime.Now;
         private readonly DateTime _start;
         private long MILLIS_PER_DAY = 86400000;
@@ -27,7 +27,12 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             this._riskRating = riskRating;
         }
 
-        public static Loan CreateTermLoan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
+        public void Payment(double amount, DateTime paymentDate)
+        {
+            _payments.Add(new Payment(amount, paymentDate));
+        }
+
+        public static Loan NewTermLoan(double loanAmount, DateTime start, DateTime maturity, int riskRating)
         {
             return new Loan(loanAmount, start, maturity, riskRating);
         }
@@ -48,7 +53,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             return 0.0;
         }
 
-        private double Duration()
+        public double Duration()
         {
             if (_expiry == null && _maturity != null)
             {
