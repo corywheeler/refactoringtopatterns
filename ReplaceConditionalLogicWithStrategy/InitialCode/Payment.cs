@@ -4,9 +4,8 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 {
     public class Payment
     {
-        private readonly double _amount;
-        private readonly DateTime _date;
-        private DateTime paymentDate;
+        private double _amount;
+        private DateTime _date;
 
         public Payment()
         {
@@ -17,27 +16,21 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         public Payment(double amount, DateTime date)
         {
             Amount = amount;
-            Date = paymentDate;
+            Date = date;
         }
 
         public double Amount
         {
-            get
-            {
-                return _amount;
-            }
+            get { return _amount; }
 
-            private set { }
+            private set { _amount = value; }
         }
 
         public DateTime Date
         {
-            get
-            {
-                return _date;
-            }
+            get { return _date; }
 
-            private set { }
+            private set { _date = value; }
         }
     }
 }
