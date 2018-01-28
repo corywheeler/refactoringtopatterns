@@ -67,7 +67,9 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         }
 
         private double WeightedAverageDuration()
-        {
+        { 
+            // This is only used to calculate capital for a Term Loan.
+
             double duration = 0.0;
             double weightedAverage = 0.0;
             double sumOfPayments = 0.0;
