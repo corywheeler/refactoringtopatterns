@@ -15,6 +15,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
         private double _riskRating;
+        private double _unusedPercentage;
 
         public Loan(double commitment, double notSureWhatThisIs, DateTime start, DateTime? expiry, DateTime? maturity, int riskRating)
         {
@@ -24,6 +25,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             this._start = start;
             this._maturity = maturity;
             this._riskRating = riskRating;
+            this._unusedPercentage = 1.0;
         }
 
         public static Loan NewTermLoan(double commitment, DateTime start, DateTime maturity, int riskRating)
@@ -32,10 +34,19 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
                             maturity, riskRating);
         }
 
-        public static Loan NewRevolver(double commitment, DateTime start, DateTime expiry, DateTime maturity, int riskRating) 
+        public static Loan NewRevolver(double commitment, DateTime start, DateTime expiry, int riskRating) 
         {
             return new Loan(commitment, 0, start, expiry,
                             null, riskRating);
+        }
+
+        public static Loan NewAdvisedLine(double commitment, DateTime start, DateTime expiry, int riskRating)
+        {
+            if (riskRating > 3) return null;
+            Loan advisedLine = new Loan(commitment, 0, start, expiry,
+                            null, riskRating);
+            advisedLine.SetUnusedPercentage(0.1);
+            return advisedLine;
         }
 
         public void Payment(double amount, DateTime paymentDate)
@@ -110,7 +121,12 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         private double GetUnusedPercentage()
         {
-            return 1.0;
+            return _unusedPercentage;
+        }
+
+        public void SetUnusedPercentage(double unusedPercentage) 
+        {
+            _unusedPercentage = unusedPercentage;
         }
 
         private double UnusedRiskAmount()
