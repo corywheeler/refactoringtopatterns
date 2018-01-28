@@ -13,7 +13,7 @@
 
         public double ForRating(double riskRating)
         {
-            return 1.0;
+            return 0.03;
         }
     }
 }

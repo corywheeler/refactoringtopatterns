@@ -15,7 +15,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         public double ForRating(double riskRating)
         {
-            return 1.0;
+            return 0.01;
         }
     }
 }
