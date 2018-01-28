@@ -16,7 +16,7 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
         private long DAYS_PER_YEAR = 365;
         private double _riskRating;
 
-        public Loan(double commitment, DateTime start, DateTime? expiry, DateTime maturity, int riskRating)
+        public Loan(double commitment, double notSureWhatThisIs, DateTime start, DateTime? expiry, DateTime maturity, int riskRating)
         {
             this._expiry = expiry;
             this._commitment = commitment;
@@ -26,15 +26,21 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             this._riskRating = riskRating;
         }
 
+        public static Loan NewTermLoan(double commitment, DateTime start, DateTime maturity, int riskRating)
+        {
+            return new Loan(commitment, commitment, start, null, 
+                            maturity, riskRating);
+        }
+
+        public static Loan NewRevolver(double commitment, DateTime start, DateTime maturity, int riskRating) 
+        {
+            return new Loan(commitment, 0, start, null,
+                            maturity, riskRating);
+        }
+
         public void Payment(double amount, DateTime paymentDate)
         {
             _payments.Add(new Payment(amount, paymentDate));
-        }
-
-        public static Loan NewTermLoan(double commitment, DateTime start, DateTime maturity, int riskRating)
-        {
-            return new Loan(commitment, start, null, 
-                            maturity, riskRating);
         }
 
         public double Capital() {
