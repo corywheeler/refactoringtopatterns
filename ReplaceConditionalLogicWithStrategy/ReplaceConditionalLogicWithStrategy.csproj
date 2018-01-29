@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ReplaceConditionalLogicWithStrategy</RootNamespace>
+    <AssemblyName>ReplaceConditionalLogicWithStrategy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InitialCode\Loan.cs" />
+    <Compile Include="InitialCode\Payment.cs" />
+    <Compile Include="InitialCode\RiskFactor.cs" />
+    <Compile Include="InitialCode\UnusedRiskFactors.cs" />
+    <Compile Include="MyWork\Loan.cs" />
+    <Compile Include="MyWork\Payment.cs" />
+    <Compile Include="MyWork\RiskFactor.cs" />
+    <Compile Include="MyWork\UnusedRiskFactors.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InitialCode\" />
+    <Folder Include="MyWork\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
