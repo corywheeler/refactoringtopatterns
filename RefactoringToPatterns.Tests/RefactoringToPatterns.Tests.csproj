@@ -46,6 +46,8 @@
     <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\XMLBuilderTestTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\LoanTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\PaymentTests.cs" />
+    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\LoanTests.cs" />
+    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\PaymentTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -79,6 +81,7 @@
     <Folder Include="PolymorphicCreationWithFactoryMethod\MyWork\" />
     <Folder Include="ReplaceConditionalLogicWithStrategy\" />
     <Folder Include="ReplaceConditionalLogicWithStrategy\InitialCode\" />
+    <Folder Include="ReplaceConditionalLogicWithStrategy\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
