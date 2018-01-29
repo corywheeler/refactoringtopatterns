@@ -59,16 +59,13 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
                 return _commitment * Duration() * RiskFactor();
             if(_expiry != null && _maturity == null) {
                 if(GetUnusedPercentage() != 1.0) {
-                    // THIS IS FOR ADVISED LINE
                     return _commitment * GetUnusedPercentage() * Duration() * RiskFactor();
                 }
                 else {
-                    // THIS IS FOR REVOLVER
                     return (OutstandingRiskAmount() * Duration() * RiskFactor())
                         + (UnusedRiskAmount() * Duration() * UnusedRiskFactor());
                 }
             }
-
             return 0.0;
         }
 
@@ -80,7 +77,6 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
             }
             else if (_expiry != null && _maturity == null)
             {
-                // SHOULD HIT HERE FOR REVOLVER AND ADVISED LINE
                 return YearsTo(_expiry);
             }
             return 0.0;
@@ -88,8 +84,6 @@ namespace ReplaceConditionalLogicWithStrategy.InitialCode
 
         private double WeightedAverageDuration()
         { 
-            // This is only used to calculate capital for a Term Loan.
-
             double duration = 0.0;
             double weightedAverage = 0.0;
             double sumOfPayments = 0.0;

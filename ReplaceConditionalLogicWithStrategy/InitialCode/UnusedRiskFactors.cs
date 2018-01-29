@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ReplaceConditionalLogicWithStrategy.InitialCode
+﻿namespace ReplaceConditionalLogicWithStrategy.InitialCode
 {
     public class UnusedRiskFactors
     {
