@@ -29,6 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -40,6 +41,8 @@
     <Compile Include="MyWork\Payment.cs" />
     <Compile Include="MyWork\RiskFactor.cs" />
     <Compile Include="MyWork\UnusedRiskFactors.cs" />
+    <Compile Include="MyWork\CapitalStrategy.cs" />
+    <Compile Include="MyWork\CapitalStrategyTermLoan.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
