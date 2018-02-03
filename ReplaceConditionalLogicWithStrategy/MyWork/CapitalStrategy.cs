@@ -1,35 +1,13 @@
 ﻿using System;
 namespace ReplaceConditionalLogicWithStrategy.MyWork
 {
-    public class CapitalStrategy
+    public abstract class CapitalStrategy
     {
 
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
-        private readonly double EPSILON = 0.001;
 
-        public CapitalStrategy()
-        {
-        }
-
-        public virtual double Capital(Loan loan) 
-        {
-            if (loan.GetExpiry() == null && loan.GetMaturity() != null)
-                return loan.GetCommitment() * loan.Duration() * RiskFactorFor(loan);
-            if (loan.GetExpiry() != null && loan.GetMaturity() == null)
-            {
-                if (Math.Abs(loan.GetUnusedPercentage() - 1.0) > EPSILON)
-                {
-                    return loan.GetCommitment() * loan.GetUnusedPercentage() * loan.Duration() * RiskFactorFor(loan);
-                }
-                else
-                {
-                    return (loan.OutstandingRiskAmount() * loan.Duration() * RiskFactorFor(loan))
-                        + (loan.UnusedRiskAmount() * loan.Duration() * UnusedRiskFactorFor(loan));
-                }
-            }
-            return 0.0;
-        }
+        public abstract double Capital(Loan loan);
 
         protected double RiskFactorFor(Loan loan)
         {
