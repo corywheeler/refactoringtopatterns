@@ -40,14 +40,14 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
             DateTime start = November(20, 2003);
             DateTime expiry = November(20, 2007);
 
-            Loan termLoan = Loan.NewRevolver(LOAN_AMOUNT, start, expiry, HIGH_RISK_TAKING);
-            termLoan.Payment(1000.00, November(20, 2004));
-            termLoan.Payment(1000.00, November(20, 2005));
-            termLoan.Payment(1000.00, November(20, 2006));
+            Loan revolverLoan = Loan.NewRevolver(LOAN_AMOUNT, start, expiry, HIGH_RISK_TAKING);
+            revolverLoan.Payment(1000.00, November(20, 2004));
+            revolverLoan.Payment(1000.00, November(20, 2005));
+            revolverLoan.Payment(1000.00, November(20, 2006));
 
             Assert.Multiple(() => {
-                Assert.AreEqual(40027, termLoan.Duration(), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(4002700, termLoan.Capital(), TWO_DIGIT_PRECISION);
+                Assert.AreEqual(40027, revolverLoan.Duration(), TWO_DIGIT_PRECISION);
+                Assert.AreEqual(4002700, revolverLoan.Capital(), TWO_DIGIT_PRECISION);
             });
         }
 
@@ -58,14 +58,14 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.InitialCode
             DateTime maturity = November(20, 2006);
             DateTime expiry = November(20, 2007);
 
-            Loan termLoan = Loan.NewAdvisedLine(LOAN_AMOUNT, start, expiry, LOW_RISK_TAKING);
-            termLoan.Payment(1000.00, November(20, 2004));
-            termLoan.Payment(1000.00, November(20, 2005));
-            termLoan.Payment(1000.00, November(20, 2006));
+            Loan advisedLineLoan = Loan.NewAdvisedLine(LOAN_AMOUNT, start, expiry, LOW_RISK_TAKING);
+            advisedLineLoan.Payment(1000.00, November(20, 2004));
+            advisedLineLoan.Payment(1000.00, November(20, 2005));
+            advisedLineLoan.Payment(1000.00, November(20, 2006));
 
             Assert.Multiple(() => {
-                Assert.AreEqual(40027, termLoan.Duration(), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(1200810, termLoan.Capital(), TWO_DIGIT_PRECISION);
+                Assert.AreEqual(40027, advisedLineLoan.Duration(), TWO_DIGIT_PRECISION);
+                Assert.AreEqual(1200810, advisedLineLoan.Capital(), TWO_DIGIT_PRECISION);
             });
         }
 
