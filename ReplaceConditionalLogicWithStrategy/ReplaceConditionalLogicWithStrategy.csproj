@@ -43,6 +43,7 @@
     <Compile Include="MyWork\CapitalStrategy.cs" />
     <Compile Include="MyWork\CapitalStrategyTermLoan.cs" />
     <Compile Include="MyWork\CapitalStrategyRevolver.cs" />
+    <Compile Include="MyWork\CapitalStrategyAdvisedLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
