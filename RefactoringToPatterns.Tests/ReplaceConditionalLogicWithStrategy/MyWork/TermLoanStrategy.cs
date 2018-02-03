@@ -12,7 +12,7 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.MyWork
         private readonly double TWO_DIGIT_PRECISION = 0.001;
 
         [Test()]
-        public void calculates_duration_of_a_loan()
+        public void test_term_loan_same_payments()
         { 
             DateTime start = November(20, 2003);
             DateTime maturity = November(20, 2006);
@@ -24,7 +24,10 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.MyWork
 
             var termStrategy = new CapitalStrategyTermLoan();
 
-            Assert.AreEqual(20027, termStrategy.Duration(termLoan), TWO_DIGIT_PRECISION);
+            Assert.Multiple(() => {
+				Assert.AreEqual(20027, termStrategy.Duration(termLoan), TWO_DIGIT_PRECISION);
+				Assert.AreEqual(6008100, termStrategy.Capital(termLoan), TWO_DIGIT_PRECISION);
+            });
         }
 
         private static DateTime November(int dayOfMonth, int year)

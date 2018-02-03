@@ -63,7 +63,6 @@
     <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\XMLBuilderTestTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\LoanTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\PaymentTests.cs" />
-    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\LoanTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\PaymentTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\RevolverStrategyTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\AdvisedLineStrategyTests.cs" />
