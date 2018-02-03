@@ -96,50 +96,9 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
             return _start;
         }
 
-        public double Duration()
-        {
-            if (_expiry == null && _maturity != null)
-            {
-                return WeightedAverageDuration();
-            }
-            else if (_expiry != null && _maturity == null)
-            {
-                return YearsTo(_expiry);
-            }
-            return 0.0;
-        }
-
-        private double WeightedAverageDuration()
-        { 
-            double duration = 0.0;
-            double weightedAverage = 0.0;
-            double sumOfPayments = 0.0;
-
-            foreach (var payment in _payments)
-            {
-                sumOfPayments += payment.Amount;
-                weightedAverage += YearsTo(payment.Date) * payment.Amount;
-            }
-
-            if (_commitment != 0.0)
-            {
-                duration = weightedAverage / sumOfPayments;
-            }
-
-            return duration;
-        }
-
         public IList<Payment> Payments() {
             return _payments;
         }
-
-        private double YearsTo(DateTime? endDate)
-        {
-            DateTime? beginDate = (_today == null ? _start : _today);
-            return (double)((endDate?.Ticks - beginDate?.Ticks) / MILLIS_PER_DAY / DAYS_PER_YEAR);
-        }
-
-       
 
         public double GetUnusedPercentage()
         {
