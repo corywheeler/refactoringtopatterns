@@ -21,35 +21,7 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
 
         public virtual double Duration(Loan loan)
         {
-            if (loan.GetExpiry() == null && loan.GetMaturity() != null)
-            {
-                return WeightedAverageDuration(loan);
-            }
-            else if (loan.GetExpiry() != null && loan.GetMaturity() == null)
-            {
-                return YearsTo(loan.GetExpiry(), loan);
-            }
-            return 0.0;
-        }
-
-        private double WeightedAverageDuration(Loan loan)
-        {
-            double duration = 0.0;
-            double weightedAverage = 0.0;
-            double sumOfPayments = 0.0;
-
-            foreach (var payment in loan.Payments())
-            {
-                sumOfPayments += payment.Amount;
-                weightedAverage += YearsTo(payment.Date, loan) * payment.Amount;
-            }
-
-            if (loan.GetCommitment() != 0.0)
-            {
-                duration = weightedAverage / sumOfPayments;
-            }
-
-            return duration;
+            return YearsTo(loan.GetExpiry(), loan);
         }
 
         protected double YearsTo(DateTime? endDate, Loan loan)
