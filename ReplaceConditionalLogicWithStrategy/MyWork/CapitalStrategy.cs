@@ -6,6 +6,7 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
 
         private long MILLIS_PER_DAY = 86400000;
         private long DAYS_PER_YEAR = 365;
+        private readonly double EPSILON = 0.001;
 
         public CapitalStrategy()
         {
@@ -17,7 +18,7 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
                 return loan.GetCommitment() * loan.Duration() * RiskFactorFor(loan);
             if (loan.GetExpiry() != null && loan.GetMaturity() == null)
             {
-                if (loan.GetUnusedPercentage() != 1.0)
+                if (Math.Abs(loan.GetUnusedPercentage() - 1.0) > EPSILON)
                 {
                     return loan.GetCommitment() * loan.GetUnusedPercentage() * loan.Duration() * RiskFactorFor(loan);
                 }

@@ -3,7 +3,7 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
 {
     public class CapitalStrategyTermLoan: CapitalStrategy
     {
-        private readonly double EPSILON = 0.01;
+        private readonly double EPSILON = 0.001;
 
         public override double Capital(Loan loan) 
         {
