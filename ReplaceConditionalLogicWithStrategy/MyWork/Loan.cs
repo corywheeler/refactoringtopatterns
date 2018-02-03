@@ -45,7 +45,7 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
         public static Loan NewRevolver(double commitment, DateTime start, DateTime expiry, int riskRating) 
         {
             return new Loan(commitment, 0, start, expiry,
-                            null, riskRating, new CapitalStrategy());
+                            null, riskRating, new CapitalStrategyRevolver());
         }
 
         public static Loan NewAdvisedLine(double commitment, DateTime start, DateTime expiry, int riskRating)
