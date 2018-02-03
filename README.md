@@ -48,3 +48,7 @@ For example, if you look in the RefactoringToPatterns.Tests project you will see
 
 Take a look around. If anything doesn't make sense once you peek at it, please just create an Issue here in GitHub where we
 can discuss it. Like any system, if you want to understand how it works, go look at the tests as they are a great durrable source of low level documentation.
+
+## On a Personal Note
+
+I've put all of my work on a branch with my name on it [corywheeler](https://github.com/corywheeler/refactoringtopatterns/tree/corywheeler). There you'll see the refactorings implemented such that the MyWork folders will differ from the Initial Code folders so you can see the solution in before and after states.
