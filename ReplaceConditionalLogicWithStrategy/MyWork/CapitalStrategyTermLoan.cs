@@ -3,6 +3,8 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
 {
     public class CapitalStrategyTermLoan: CapitalStrategy
     {
+        private readonly double EPSILON = 0.01;
+
         public override double Capital(Loan loan) 
         {
             return loan.GetCommitment() * Duration(loan) * RiskFactorFor(loan);
@@ -25,7 +27,7 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
                 weightedAverage += YearsTo(payment.Date, loan) * payment.Amount;
             }
 
-            if (loan.GetCommitment() != 0.0)
+            if (Math.Abs(loan.GetCommitment()) > EPSILON)
             {
                 duration = weightedAverage / sumOfPayments;
             }
