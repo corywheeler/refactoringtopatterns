@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicCreationWithFact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceConditionalLogicWithStrategy", "ReplaceConditionalLogicWithStrategy\ReplaceConditionalLogicWithStrategy.csproj", "{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTemplateMethod", "FormTemplateMethod\FormTemplateMethod.csproj", "{F1231A49-7229-47D8-B19F-197683E3A829}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,5 +45,9 @@ Global
 		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1231A49-7229-47D8-B19F-197683E3A829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1231A49-7229-47D8-B19F-197683E3A829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1231A49-7229-47D8-B19F-197683E3A829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1231A49-7229-47D8-B19F-197683E3A829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
