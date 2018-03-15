@@ -48,6 +48,10 @@
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\PaymentTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\LoanTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\PaymentTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\AdvisedLineStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\PaymentTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\RevolverStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\TermLoanStrategyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

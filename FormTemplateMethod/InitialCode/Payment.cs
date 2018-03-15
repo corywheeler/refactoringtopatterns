@@ -1,5 +1,7 @@
 ﻿using System;
+
 namespace FormTemplateMethod.InitialCode
+
 {
     public class Payment
     {

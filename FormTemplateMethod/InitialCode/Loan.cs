@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace FormTemplateMethod.InitialCode
 {
     public class Loan
