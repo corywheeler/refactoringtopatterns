@@ -7,7 +7,12 @@ namespace FormTemplateMethod.InitialCode
 
         public override double Capital(Loan loan)
         {
-            return loan.GetCommitment() * Duration(loan) * RiskFactorFor(loan);
+            return RiskAmountFor(loan) * Duration(loan) * RiskFactorFor(loan);
+        }
+
+        public override double RiskAmountFor(Loan loan)
+        {
+            return loan.GetCommitment();
         }
 
         public override double Duration(Loan loan)
