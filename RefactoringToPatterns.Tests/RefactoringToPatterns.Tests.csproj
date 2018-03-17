@@ -52,6 +52,10 @@
     <Compile Include="FormTemplateMethod\InitialCode\PaymentTests.cs" />
     <Compile Include="FormTemplateMethod\InitialCode\RevolverStrategyTests.cs" />
     <Compile Include="FormTemplateMethod\InitialCode\TermLoanStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\AdvisedLineStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\PaymentTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

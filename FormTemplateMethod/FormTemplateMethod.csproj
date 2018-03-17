@@ -39,6 +39,14 @@
     <Compile Include="InitialCode\CapitalStrategyAdvisedLine.cs" />
     <Compile Include="InitialCode\CapitalStrategyRevolver.cs" />
     <Compile Include="InitialCode\CapitalStrategyTermLoan.cs" />
+    <Compile Include="MyWork\CapitalStrategy.cs" />
+    <Compile Include="MyWork\CapitalStrategyAdvisedLine.cs" />
+    <Compile Include="MyWork\CapitalStrategyRevolver.cs" />
+    <Compile Include="MyWork\CapitalStrategyTermLoan.cs" />
+    <Compile Include="MyWork\Loan.cs" />
+    <Compile Include="MyWork\Payment.cs" />
+    <Compile Include="MyWork\RiskFactor.cs" />
+    <Compile Include="MyWork\UnusedRiskFactors.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
