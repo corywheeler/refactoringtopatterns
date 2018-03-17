@@ -48,6 +48,14 @@
     <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\PaymentTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\LoanTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\PaymentTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\AdvisedLineStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\PaymentTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\RevolverStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\InitialCode\TermLoanStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\AdvisedLineStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\PaymentTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
+    <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -73,6 +81,10 @@
       <Project>{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}</Project>
       <Name>ReplaceConditionalLogicWithStrategy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FormTemplateMethod\FormTemplateMethod.csproj">
+      <Project>{F1231A49-7229-47D8-B19F-197683E3A829}</Project>
+      <Name>FormTemplateMethod</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -82,6 +94,9 @@
     <Folder Include="ReplaceConditionalLogicWithStrategy\" />
     <Folder Include="ReplaceConditionalLogicWithStrategy\InitialCode\" />
     <Folder Include="ReplaceConditionalLogicWithStrategy\MyWork\" />
+    <Folder Include="FormTemplateMethod\" />
+    <Folder Include="FormTemplateMethod\InitialCode\" />
+    <Folder Include="FormTemplateMethod\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
