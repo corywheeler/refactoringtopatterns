@@ -56,6 +56,7 @@
     <Compile Include="FormTemplateMethod\MyWork\PaymentTests.cs" />
     <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
     <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
+    <Compile Include="ComposeMethod\InitialCode\ListTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -85,6 +86,10 @@
       <Project>{F1231A49-7229-47D8-B19F-197683E3A829}</Project>
       <Name>FormTemplateMethod</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ComposeMethod\ComposeMethod.csproj">
+      <Project>{DB582B2C-1FED-426E-8DBC-9618ECA07843}</Project>
+      <Name>ComposeMethod</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -97,6 +102,9 @@
     <Folder Include="FormTemplateMethod\" />
     <Folder Include="FormTemplateMethod\InitialCode\" />
     <Folder Include="FormTemplateMethod\MyWork\" />
+    <Folder Include="ComposeMethod\" />
+    <Folder Include="ComposeMethod\InitialCode\" />
+    <Folder Include="ComposeMethod\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

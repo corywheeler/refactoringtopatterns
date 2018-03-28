@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ComposeMethod.InitialCode
+namespace RefactoringToPatterns.ComposeMethod.InitialCode
 {
     public class List
     {
         private bool _readOnly;
         private int _size;
-        private Object[] _elements;
+        private Object[] _elements = new Object[]{};
 
         public void add(Object element) {
             if(!_readOnly) {
@@ -22,6 +22,14 @@ namespace ComposeMethod.InitialCode
                 }
 
                 _elements[_size++] = element;
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return _size;
             }
         }
     }
