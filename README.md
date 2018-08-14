@@ -15,7 +15,6 @@ Have to say thank you to Joshua for putting all of these patterns together and f
 All code samples are written in C#, and therefor will follow C# coding conventions (versus any Java coding conventions you might see in the book).
 
 I have tested running this code in the following IDE's, and all seems to work fine:
-* [Visual Studio 2017 (on Windows)](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 * [Visual Studio 2015 (on Windows)](https://www.visualstudio.com/vs/older-downloads/)
 * [Visual Studio Community 2017 (for Mac)](https://www.visualstudio.com/vs/visual-studio-mac/)
 * [Rider EAP versions (on Windows)](https://www.jetbrains.com/rider/)
