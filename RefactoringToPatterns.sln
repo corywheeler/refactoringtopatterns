@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringToPatterns.Tests", "RefactoringToPatterns.Tests\RefactoringToPatterns.Tests.csproj", "{6E49F4DC-8D6A-4DED-970C-D9C4DDD43A40}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceConstructorsWithCreationMethods", "ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj", "{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}"
@@ -14,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceConditionalLogicWithStrategy", "ReplaceConditionalLogicWithStrategy\ReplaceConditionalLogicWithStrategy.csproj", "{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTemplateMethod", "FormTemplateMethod\FormTemplateMethod.csproj", "{F1231A49-7229-47D8-B19F-197683E3A829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveEmbellishmentToDecorator", "MoveEmbellishmentToDecorator\MoveEmbellishmentToDecorator.csproj", "{32EA38AF-8F24-44D4-8A21-F70B483DA06A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,5 +52,15 @@ Global
 		{F1231A49-7229-47D8-B19F-197683E3A829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1231A49-7229-47D8-B19F-197683E3A829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1231A49-7229-47D8-B19F-197683E3A829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32EA38AF-8F24-44D4-8A21-F70B483DA06A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32EA38AF-8F24-44D4-8A21-F70B483DA06A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32EA38AF-8F24-44D4-8A21-F70B483DA06A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32EA38AF-8F24-44D4-8A21-F70B483DA06A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2CBE98B-67AF-4B45-88FD-A1AC2E87BA7E}
 	EndGlobalSection
 EndGlobal
