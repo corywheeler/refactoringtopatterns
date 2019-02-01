@@ -57,6 +57,7 @@
     <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
     <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
     <Compile Include="ComposeMethod\InitialCode\ListTests.cs" />
+    <Compile Include="ComposeMethod\MyWork\ListTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -6,13 +6,16 @@ namespace RefactoringToPatterns.ComposeMethod.MyWork
     {
         private bool _readOnly;
         private int _size;
-        private Object[] _elements;
+        private Object[] _elements = new Object[] { };
 
-        public void add(Object element) {
-            if(!_readOnly) {
+        public void add(Object element)
+        {
+            if (!_readOnly)
+            {
                 int newSize = _size + 1;
 
-                if(newSize > _elements.Length) {
+                if (newSize > _elements.Length)
+                {
                     Object[] newElements = new Object[_elements.Length + 10];
 
                     for (int i = 0; i < _size; i++)
@@ -22,6 +25,14 @@ namespace RefactoringToPatterns.ComposeMethod.MyWork
                 }
 
                 _elements[_size++] = element;
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return _size;
             }
         }
     }
