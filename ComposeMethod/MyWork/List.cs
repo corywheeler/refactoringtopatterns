@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RefactoringToPatterns.ComposeMethod.MyWork
+namespace ComposeMethod.MyWork
 {
     public class List
     {

@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using RefactoringToPatterns.ComposeMethod.InitialCode;
+using List = ComposeMethod.InitialCode.List;
 
 namespace RefactoringToPatterns.ComposeMethod.InitialCode
 {
