@@ -36,7 +36,6 @@
     <Compile Include="MyWork\Descriptors\AttributeDescriptor.cs" />
     <Compile Include="MyWork\Descriptors\BooleanDescriptor.cs" />
     <Compile Include="MyWork\Descriptors\DefaultDescriptor.cs" />
-    <Compile Include="MyWork\Descriptors\ReferenceDescriptor.cs" />
     <Compile Include="MyWork\Domain\User.cs" />
     <Compile Include="MyWork\Mappers\DescriptorMapper.cs" />
   </ItemGroup>

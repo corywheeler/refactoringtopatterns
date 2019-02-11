@@ -32,5 +32,14 @@ namespace EncapsulateClassesWithFactory.MyWork.Descriptors
         {
             return new ReferenceDescriptor(descriptorName, mapperType, typeof(User));
         }
+
+        internal class ReferenceDescriptor : AttributeDescriptor
+        {
+
+            public ReferenceDescriptor(string descriptorName, Type mapperType, Type forType)
+                : base(descriptorName, mapperType, forType)
+            {
+            }
+        }
     }
 }

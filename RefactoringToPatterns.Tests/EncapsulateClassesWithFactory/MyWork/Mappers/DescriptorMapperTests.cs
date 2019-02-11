@@ -49,7 +49,7 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.MyWork.Mappers
             var createdByDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("createdBy");
             
-		    Assert.IsInstanceOf(typeof(ReferenceDescriptor), createdByDescriptor);
+            Assert.AreEqual("ReferenceDescriptor", createdByDescriptor.GetType().Name);
         }
 
 		[Test]
@@ -57,8 +57,8 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.MyWork.Mappers
 		{
 			var lastChangedByDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("lastChangedBy");
-            
-		    Assert.IsInstanceOf(typeof(ReferenceDescriptor), lastChangedByDescriptor);
+
+		    Assert.AreEqual("ReferenceDescriptor", lastChangedByDescriptor.GetType().Name);
         }
 
 		[Test]
