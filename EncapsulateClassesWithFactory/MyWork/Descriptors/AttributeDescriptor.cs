@@ -5,18 +5,18 @@ namespace EncapsulateClassesWithFactory.MyWork.Descriptors
 {
     public class AttributeDescriptor
     {
-        readonly string descriptorName;
-        readonly Type mapperType;
-        readonly Type forType;
+        readonly string _descriptorName;
+        readonly Type _mapperType;
+        readonly Type _forType;
 
         protected AttributeDescriptor(string descriptorName, Type mapperType, Type forType)
         {
-            this.descriptorName = descriptorName;
-            this.mapperType = mapperType;
-            this.forType = forType;
+            this._descriptorName = descriptorName;
+            this._mapperType = mapperType;
+            this._forType = forType;
         }
 
-        public string DescriptorName => descriptorName;
+        public string DescriptorName => _descriptorName;
 
         public static AttributeDescriptor ForInteger(string descriptorName, Type classType)
         {
@@ -35,8 +35,23 @@ namespace EncapsulateClassesWithFactory.MyWork.Descriptors
 
         internal class ReferenceDescriptor : AttributeDescriptor
         {
+            internal ReferenceDescriptor(string descriptorName, Type mapperType, Type forType)
+                : base(descriptorName, mapperType, forType)
+            {
+            }
+        }
 
-            public ReferenceDescriptor(string descriptorName, Type mapperType, Type forType)
+        internal class DefaultDescriptor : AttributeDescriptor
+        {
+            internal DefaultDescriptor(string descriptorName, Type mapperType, Type forType)
+                : base(descriptorName, mapperType, forType)
+            {
+            }
+        }
+
+        internal class BooleanDescriptor : AttributeDescriptor
+        {
+            internal BooleanDescriptor(string descriptorName, Type mapperType, Type forType)
                 : base(descriptorName, mapperType, forType)
             {
             }

@@ -21,8 +21,8 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.MyWork.Mappers
         {
             var remoteIdDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("remoteId");
-            
-            Assert.IsInstanceOf(typeof(DefaultDescriptor),remoteIdDescriptor);
+
+            Assert.AreEqual("DefaultDescriptor", remoteIdDescriptor.GetType().Name);
         }
 
         [Test]
@@ -31,7 +31,7 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.MyWork.Mappers
 			var createdDateDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("createdDate");
             
-		    Assert.IsInstanceOf(typeof(DefaultDescriptor), createdDateDescriptor);
+		    Assert.AreEqual("DefaultDescriptor", createdDateDescriptor.GetType().Name);
         }
 
 		[Test]
@@ -39,8 +39,8 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.MyWork.Mappers
 		{
 			var lastChangedDateDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("lastChangedDate");
-            
-		    Assert.IsInstanceOf(typeof(DefaultDescriptor), lastChangedDateDescriptor);
+
+		    Assert.AreEqual("DefaultDescriptor", lastChangedDateDescriptor.GetType().Name);
         }
 
 		[Test]
@@ -66,8 +66,8 @@ namespace RefactoringToPatterns.EncapsulateClassesWithFactory.MyWork.Mappers
 		{
 			var optimisticLockVersionDescriptor = 
                 testDescriptorMapper.GetMappedDescriptorFor("optimisticLockVersion");
-            
-		    Assert.IsInstanceOf(typeof(DefaultDescriptor), optimisticLockVersionDescriptor);
+
+		    Assert.AreEqual("DefaultDescriptor", optimisticLockVersionDescriptor.GetType().Name);
         }
 
 		[Test]
