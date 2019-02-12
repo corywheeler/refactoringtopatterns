@@ -10,7 +10,7 @@ namespace RefactoringToPatterns.ComposeMethod.MyWork
         public void it_tells_the_count_of_how_many_things_it_contains()
         {
             var list = new List();   
-            list.add(new {});
+            list.Add(new {});
             Assert.AreEqual(1, list.Count);
         }
     }

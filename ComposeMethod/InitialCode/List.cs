@@ -8,7 +8,7 @@ namespace ComposeMethod.InitialCode
         private int _size;
         private Object[] _elements = new Object[]{};
 
-        public void add(Object element) {
+        public void Add(Object element) {
             if(!_readOnly) {
                 int newSize = _size + 1;
 
