@@ -58,6 +58,7 @@
     <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
     <Compile Include="ComposeMethod\InitialCode\ListTests.cs" />
     <Compile Include="ComposeMethod\MyWork\ListTests.cs" />
+    <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterWithOrdersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -91,6 +92,10 @@
       <Project>{DB582B2C-1FED-426E-8DBC-9618ECA07843}</Project>
       <Name>ComposeMethod</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReplaceImplicitTreeWithComposite\ReplaceImplicitTreeWithComposite.csproj">
+      <Project>{DA8504D9-4160-43FB-AEE5-E6DDC9368A91}</Project>
+      <Name>ReplaceImplicitTreeWithComposite</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -106,6 +111,9 @@
     <Folder Include="ComposeMethod\" />
     <Folder Include="ComposeMethod\InitialCode\" />
     <Folder Include="ComposeMethod\MyWork\" />
+    <Folder Include="ReplaceImplicitTreeWithComposite\" />
+    <Folder Include="ReplaceImplicitTreeWithComposite\InitialCode\" />
+    <Folder Include="ReplaceImplicitTreeWithComposite\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
