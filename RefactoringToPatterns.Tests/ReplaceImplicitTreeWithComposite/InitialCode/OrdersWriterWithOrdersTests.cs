@@ -13,8 +13,8 @@ namespace RefactoringToPatterns.Tests.ReplaceImplicitTreeWithComposite.InitialCo
         {
             var orders = new Orders();
             var order = new Order(1234);
-            order.Add(new Product(4321, "T-Shirt", ProductSize.MEDIUM, "21.00"));
-            order.Add(new Product(6789, "Socks", ProductSize.MEDIUM, "8.00"));
+            order.Add(new Product(4321, "T-Shirt", ProductSize.Medium, "21.00"));
+            order.Add(new Product(6789, "Socks", ProductSize.Medium, "8.00"));
             orders.Add(order);
 
             this.ordersWriter = new OrdersWriter(orders);
