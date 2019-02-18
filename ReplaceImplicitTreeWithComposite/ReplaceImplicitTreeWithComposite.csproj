@@ -40,6 +40,15 @@
     </Compile>
     <Compile Include="InitialCode\Order.cs" />
     <Compile Include="InitialCode\ProductSize.cs" />
+    <Compile Include="MyWork\Order.cs" />
+    <Compile Include="MyWork\Orders.cs" />
+    <Compile Include="MyWork\OrdersWriter.cs">
+      <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="MyWork\Product.cs">
+      <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="MyWork\ProductSize.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />

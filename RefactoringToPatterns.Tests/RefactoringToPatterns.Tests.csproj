@@ -59,6 +59,7 @@
     <Compile Include="ComposeMethod\InitialCode\ListTests.cs" />
     <Compile Include="ComposeMethod\MyWork\ListTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterWithOrdersTests.cs" />
+    <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\OrdersWriterWithOrdersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

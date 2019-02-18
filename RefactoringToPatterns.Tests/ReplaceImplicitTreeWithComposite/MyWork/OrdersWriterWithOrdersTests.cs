@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using ReplaceImplicitTreeWithComposite.InitialCode;
+using ReplaceImplicitTreeWithComposite.MyWork;
 
-namespace RefactoringToPatterns.ReplaceImplicitTreeWithComposite.InitialCode
+namespace RefactoringToPatterns.ReplaceImplicitTreeWithComposite.MyWork
 {
     [TestFixture()]
     public class OrdersWriterWithOrdersTests
