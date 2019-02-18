@@ -17,10 +17,10 @@ namespace RefactoringToPatterns.Tests.ReplaceImplicitTreeWithComposite.InitialCo
             order.Add(new Product(6789, "Socks", ProductSize.MEDIUM, "8.00"));
             orders.Add(order);
 
-            ordersWriter = new OrdersWriter(orders);
+            this.ordersWriter = new OrdersWriter(orders);
         }
 
-        [Test()]
+        [Test]
         public void GetContents_produces_all_orders()
         {
             var expectedOrder =
@@ -40,11 +40,11 @@ namespace RefactoringToPatterns.Tests.ReplaceImplicitTreeWithComposite.InitialCo
                     "</product>" + 
                 "</order>" + 
             "</orders>";
-            Assert.AreEqual(expectedOrder, ordersWriter.GetContents());
+            Assert.AreEqual(expectedOrder, this.ordersWriter.GetContents());
         }
     }
 
-    [TestFixture()]
+    [TestFixture]
     public class OrdersWriterWithNoOrdersTests
     {
         private OrdersWriter ordersWriter;
@@ -53,17 +53,17 @@ namespace RefactoringToPatterns.Tests.ReplaceImplicitTreeWithComposite.InitialCo
         public void Init()
         {
             var orders = new Orders();
-            ordersWriter = new OrdersWriter(orders);
+            this.ordersWriter = new OrdersWriter(orders);
         }
 
-        [Test()]
+        [Test]
         public void GetContents_produces_no_orders()
         {
             var expectedOrder = 
             "<orders>" + 
             "</orders>";
 
-            Assert.AreEqual(expectedOrder, ordersWriter.GetContents());
+            Assert.AreEqual(expectedOrder, this.ordersWriter.GetContents());
         }
     }
 }

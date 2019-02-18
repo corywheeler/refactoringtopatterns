@@ -4,15 +4,19 @@
     {
         public Product(int id, string name, ProductSize size, string price)
         {
-            ID = id;
-            Name = name;
-            Size = size;
-            Price = price;
+            this.ID = id;
+            this.Name = name;
+            this.Size = size;
+            this.Price = price;
         }
 
         public int ID { get; }
+
         public string Name { get; }
+
         public ProductSize Size { get;  }
+
         public string Price { get; }
+
     }
 }

@@ -4,33 +4,33 @@ namespace ReplaceImplicitTreeWithComposite.InitialCode
 {
     public class Order
     {
-        private readonly int _id;
-        private List<Product> _products;
+        private readonly int id;
+        private List<Product> products;
 
         public Order(int id)
         {
-            _products = new List<Product>();
-            _id = id;
+            this.products = new List<Product>();
+            this.id = id;
         }
 
         public int OrderId()
         {
-            return _id;
+            return this.id;
         }
 
         public void Add(Product product)
         {
-            _products.Add(product);
+            this.products.Add(product);
         }
 
         public int ProductCount()
         {
-            return _products.Count;
+            return this.products.Count;
         }
 
         public Product Product(int insertionIndex)
         {
-            return _products[insertionIndex];
+            return this.products[insertionIndex];
         }
     }
 }

@@ -31,9 +31,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="InitialCode\OrdersWriter.cs" />
+    <Compile Include="InitialCode\OrdersWriter.cs">
+      <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="InitialCode\Orders.cs" />
-    <Compile Include="InitialCode\Product.cs" />
+    <Compile Include="InitialCode\Product.cs">
+      <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="InitialCode\Order.cs" />
     <Compile Include="InitialCode\ProductSize.cs" />
   </ItemGroup>

@@ -2,29 +2,29 @@
 
 namespace ReplaceImplicitTreeWithComposite.InitialCode
 {
+
     public class Orders
     {
-        private List<Order> _orders;
+        private List<Order> orders;
 
         public Orders()
         {
-            _orders = new List<Order>();
+            this.orders = new List<Order>();
         }
 
         public void Add(Order order)
         {
-            _orders.Add(order);
-
+            this.orders.Add(order);
         }
 
         public int OrderCount()
         {
-            return _orders.Count;
+            return this.orders.Count;
         }
 
         public Order Order(int insertionIndex)
         {
-            return _orders[insertionIndex];
+            return this.orders[insertionIndex];
         }
     }
 }
