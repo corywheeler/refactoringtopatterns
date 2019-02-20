@@ -1,17 +1,24 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 
 namespace ReplaceImplicitTreeWithComposite.MyWork
 {
     public class TagNode
     {
-        private string name;
         private StringBuilder attributes;
+        private IList<TagNode> children = new List<TagNode>();
+        private string name;
         private string value = string.Empty;
 
         public TagNode(string name)
         {
             this.name = name;
             this.attributes = new StringBuilder();
+        }
+
+        public void Add(TagNode tagNode)
+        {
+            this.children.Add(tagNode);
         }
 
         public void AddAttribute(string attribute, string value)
@@ -31,8 +38,14 @@ namespace ReplaceImplicitTreeWithComposite.MyWork
         public override string ToString()
         {
             var result =
-                "<" + this.name + this.attributes + ">" +
-                this.value +
+                "<" + this.name + this.attributes + ">";
+
+            foreach (TagNode tagNode in this.children)
+            {
+                result += tagNode.ToString();
+            }
+
+            result += this.value +
                 "</" + this.name + ">";
             return result;
         }
