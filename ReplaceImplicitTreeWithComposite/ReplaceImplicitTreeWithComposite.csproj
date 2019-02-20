@@ -50,6 +50,7 @@
       <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="MyWork\ProductSize.cs" />
+    <Compile Include="MyWork\TagNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InitialCode\" />
