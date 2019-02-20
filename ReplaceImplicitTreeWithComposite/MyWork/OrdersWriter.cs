@@ -15,6 +15,12 @@ namespace ReplaceImplicitTreeWithComposite.MyWork
         public string GetContents()
         {
             StringBuilder xml = new StringBuilder();
+            WriteOrderTo(xml);
+            return xml.ToString();
+        }
+
+        private void WriteOrderTo(StringBuilder xml)
+        {
             xml.Append("<orders>");
             for (int i = 0; i < this.orders.OrderCount(); i++)
             {
@@ -23,39 +29,48 @@ namespace ReplaceImplicitTreeWithComposite.MyWork
                 xml.Append(" id='");
                 xml.Append(order.OrderId());
                 xml.Append("'>");
-                for (int j = 0; j < order.ProductCount(); j++)
-                {
-                    Product product = order.Product(j);
-                    xml.Append("<product");
-                    xml.Append(" id='");
-                    xml.Append(product.ID);
-                    xml.Append("'");
-                    xml.Append(" color='");
-                    xml.Append(this.ColorFor(product));
-                    xml.Append("'");
-                    if (product.Size != (int)ProductSize.NotApplicable)
-                    {
-                        xml.Append(" size='");
-                        xml.Append(this.SizeFor(product));
-                        xml.Append("'");
-                    }
-
-                    xml.Append(">");
-                    xml.Append("<price");
-                    xml.Append(" currency='");
-                    xml.Append(this.CurrencyFor(product));
-                    xml.Append("'>");
-                    xml.Append(product.Price);
-                    xml.Append("</price>");
-                    xml.Append(product.Name);
-                    xml.Append("</product>");
-                }
+                WriteProductsTo(xml, order);
 
                 xml.Append("</order>");
             }
 
             xml.Append("</orders>");
-            return xml.ToString();
+        }
+
+        private void WriteProductsTo(StringBuilder xml, Order order)
+        {
+            for (int j = 0; j < order.ProductCount(); j++)
+            {
+                Product product = order.Product(j);
+                xml.Append("<product");
+                xml.Append(" id='");
+                xml.Append(product.ID);
+                xml.Append("'");
+                xml.Append(" color='");
+                xml.Append(this.ColorFor(product));
+                xml.Append("'");
+                if (product.Size != (int)ProductSize.NotApplicable)
+                {
+                    xml.Append(" size='");
+                    xml.Append(this.SizeFor(product));
+                    xml.Append("'");
+                }
+
+                xml.Append(">");
+                WritePriceTo(xml, product);
+                xml.Append(product.Name);
+                xml.Append("</product>");
+            }
+        }
+
+        private void WritePriceTo(StringBuilder xml, Product product)
+        {
+            xml.Append("<price");
+            xml.Append(" currency='");
+            xml.Append(this.CurrencyFor(product));
+            xml.Append("'>");
+            xml.Append(product.Price);
+            xml.Append("</price>");
         }
 
         private string CurrencyFor(Product product)
