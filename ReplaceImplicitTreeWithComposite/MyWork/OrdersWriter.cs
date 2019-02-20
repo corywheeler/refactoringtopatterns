@@ -65,12 +65,10 @@ namespace ReplaceImplicitTreeWithComposite.MyWork
 
         private void WritePriceTo(StringBuilder xml, Product product)
         {
-            xml.Append("<price");
-            xml.Append(" currency='");
-            xml.Append(this.CurrencyFor(product));
-            xml.Append("'>");
-            xml.Append(product.Price);
-            xml.Append("</price>");
+            TagNode priceNode = new TagNode("price");
+            priceNode.AddAttribute("currency", CurrencyFor(product));
+            priceNode.AddValue(product.Price);
+            xml.Append(priceNode.ToString());
         }
 
         private string CurrencyFor(Product product)
