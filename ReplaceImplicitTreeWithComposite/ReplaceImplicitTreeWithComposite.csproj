@@ -44,7 +44,7 @@
     <Compile Include="MyWork\Order.cs" />
     <Compile Include="MyWork\Orders.cs" />
     <Compile Include="MyWork\OrdersWriter.cs">
-      <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
+      <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="MyWork\Product.cs">
       <ExcludeFromStyleCop>false</ExcludeFromStyleCop>

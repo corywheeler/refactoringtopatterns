@@ -2,7 +2,6 @@
 
 namespace ReplaceImplicitTreeWithComposite.MyWork
 {
-
     public class OrdersWriter
     {
         private Orders orders;
@@ -15,60 +14,54 @@ namespace ReplaceImplicitTreeWithComposite.MyWork
         public string GetContents()
         {
             StringBuilder xml = new StringBuilder();
-            WriteOrderTo(xml);
+            this.WriteOrderTo(xml);
             return xml.ToString();
         }
 
         private void WriteOrderTo(StringBuilder xml)
         {
-            xml.Append("<orders>");
+            TagNode ordersTag = new TagNode("orders");
+
             for (int i = 0; i < this.orders.OrderCount(); i++)
             {
                 Order order = this.orders.Order(i);
-                xml.Append("<order");
-                xml.Append(" id='");
-                xml.Append(order.OrderId());
-                xml.Append("'>");
-                WriteProductsTo(xml, order);
+                TagNode orderTag = new TagNode("order");
+                orderTag.AddAttribute("id", order.OrderId().ToString());
 
-                xml.Append("</order>");
+                this.WriteProductsTo(orderTag, order);
+
+                ordersTag.Add(orderTag);
             }
 
-            xml.Append("</orders>");
+            xml.Append(ordersTag.ToString());
         }
 
-        private void WriteProductsTo(StringBuilder xml, Order order)
+        private void WriteProductsTo(TagNode orderTag, Order order)
         {
             for (int j = 0; j < order.ProductCount(); j++)
             {
                 Product product = order.Product(j);
-                xml.Append("<product");
-                xml.Append(" id='");
-                xml.Append(product.ID);
-                xml.Append("'");
-                xml.Append(" color='");
-                xml.Append(this.ColorFor(product));
-                xml.Append("'");
+                TagNode productTag = new TagNode("product");
+                productTag.AddAttribute("id", product.ID.ToString());
+                productTag.AddAttribute("color", this.ColorFor(product));
                 if (product.Size != (int)ProductSize.NotApplicable)
                 {
-                    xml.Append(" size='");
-                    xml.Append(this.SizeFor(product));
-                    xml.Append("'");
+                    productTag.AddAttribute("size", this.SizeFor(product));
                 }
 
-                xml.Append(">");
-                WritePriceTo(xml, product);
-                xml.Append(product.Name);
-                xml.Append("</product>");
+                this.WritePriceTo(productTag, product);
+
+                productTag.AddValue(product.Name);
+                orderTag.Add(productTag);
             }
         }
 
-        private void WritePriceTo(StringBuilder xml, Product product)
+        private void WritePriceTo(TagNode productTag, Product product)
         {
             TagNode priceNode = new TagNode("price");
-            priceNode.AddAttribute("currency", CurrencyFor(product));
+            priceNode.AddAttribute("currency", this.CurrencyFor(product));
             priceNode.AddValue(product.Price);
-            xml.Append(priceNode.ToString());
+            productTag.Add(priceNode);
         }
 
         private string CurrencyFor(Product product)
