@@ -60,6 +60,8 @@
     <Compile Include="ComposeMethod\MyWork\ListTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterWithOrdersTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\OrdersWriterWithOrdersTests.cs" />
+    <Compile Include="EncapsulateCompositeWithBuilder\InitialCode\TagTests.cs" />
+    <Compile Include="EncapsulateCompositeWithBuilder\MyWork\TagTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -97,6 +99,10 @@
       <Project>{DA8504D9-4160-43FB-AEE5-E6DDC9368A91}</Project>
       <Name>ReplaceImplicitTreeWithComposite</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EncapsulateCompositeWithBuilder\EncapsulateCompositeWithBuilder.csproj">
+      <Project>{9CA5D6B8-43D4-4325-9E7D-BF7E1E2D4C51}</Project>
+      <Name>EncapsulateCompositeWithBuilder</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -115,6 +121,9 @@
     <Folder Include="ReplaceImplicitTreeWithComposite\" />
     <Folder Include="ReplaceImplicitTreeWithComposite\InitialCode\" />
     <Folder Include="ReplaceImplicitTreeWithComposite\MyWork\" />
+    <Folder Include="EncapsulateCompositeWithBuilder\" />
+    <Folder Include="EncapsulateCompositeWithBuilder\InitialCode\" />
+    <Folder Include="EncapsulateCompositeWithBuilder\MyWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
