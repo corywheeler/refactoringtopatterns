@@ -97,6 +97,10 @@
       <Project>{DA8504D9-4160-43FB-AEE5-E6DDC9368A91}</Project>
       <Name>ReplaceImplicitTreeWithComposite</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EncapsulateCompositeWithBuilder\EncapsulateCompositeWithBuilder.csproj">
+      <Project>{9CA5D6B8-43D4-4325-9E7D-BF7E1E2D4C51}</Project>
+      <Name>EncapsulateCompositeWithBuilder</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
