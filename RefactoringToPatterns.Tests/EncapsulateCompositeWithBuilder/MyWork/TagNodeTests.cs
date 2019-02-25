@@ -30,8 +30,7 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
         {
             var expected =
                 "<product>" +
-                    "<price>" +
-                    "</price>" +
+                    "<price/>" +
                 "</product>"; 
 
             TagNode productTag = new TagNode("product");
@@ -46,8 +45,7 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             var expected =
                 "<orders>" +
                     "<order>" +
-                        "<product>" +
-                        "</product>" +
+                        "<product/>" +
                     "</order>" +
                 "</orders>";
 
@@ -57,6 +55,16 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             ordersTag.Add(orderTag);
 
             Assert.AreEqual(expected, ordersTag.ToString());
+        }
+
+        [Test]
+        public void TestSelfClosingSingularTag()
+        {
+            var expected = "<flavors/>";
+
+            TagNode flavorsTag = new TagNode("flavors");
+
+            Assert.AreEqual(expected, flavorsTag.ToString());
         }
     }
 }

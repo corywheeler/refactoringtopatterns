@@ -80,6 +80,7 @@
     <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterWithOrdersTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\OrdersWriterWithOrdersTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\TagTests.cs" />
+    <Compile Include="EncapsulateCompositeWithBuilder\MyWork\TagBuilderTest.cs" />
     <Compile Include="EncapsulateCompositeWithBuilder\InitialCode\TagNodeTests.cs" />
     <Compile Include="EncapsulateCompositeWithBuilder\MyWork\TagNodeTests.cs" />
   </ItemGroup>

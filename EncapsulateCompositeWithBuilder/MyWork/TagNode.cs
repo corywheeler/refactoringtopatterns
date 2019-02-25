@@ -40,6 +40,11 @@ namespace EncapsulateCompositeWithBuilder.MyWork
             var result =
                 "<" + this.name + this.attributes + ">";
 
+            if (ShouldSelfClose())
+            {
+                return result.Replace(">", "/>");
+            }
+
             foreach (TagNode tagNode in this.children)
             {
                 result += tagNode.ToString();
@@ -48,6 +53,21 @@ namespace EncapsulateCompositeWithBuilder.MyWork
             result += this.value +
                 "</" + this.name + ">";
             return result;
+        }
+
+        private bool ShouldSelfClose()
+        {
+            return !HasValue() && !HasChildren();
+        }
+
+        private bool HasChildren()
+        {
+            return this.children.Count > 0;
+        }
+
+        private bool HasValue()
+        {
+            return !this.value.Equals(string.Empty);
         }
     }
 }
