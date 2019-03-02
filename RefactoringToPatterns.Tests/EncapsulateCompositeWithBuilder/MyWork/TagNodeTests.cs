@@ -66,5 +66,17 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
 
             Assert.AreEqual(expected, flavorsTag.ToString());
         }
+
+        [Test]
+        public void TestParents()
+        {
+            TagNode root = new TagNode("root");
+            Assert.Null(root.Parent);
+
+            TagNode childNode = new TagNode("child");
+            root.Add(childNode);
+            Assert.AreEqual(root, childNode.Parent);
+            Assert.AreEqual("root", childNode.Parent.Name);
+        }
     }
 }

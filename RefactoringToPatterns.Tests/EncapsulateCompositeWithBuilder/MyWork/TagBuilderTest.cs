@@ -54,7 +54,6 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
         }
 
         [Test]
-        [Ignore("Restore this once corrections have been made to TagTest")]
         public void TestBuildSibling()
         {
             string expectedXml =

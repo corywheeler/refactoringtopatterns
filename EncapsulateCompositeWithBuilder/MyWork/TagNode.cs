@@ -7,18 +7,21 @@ namespace EncapsulateCompositeWithBuilder.MyWork
     {
         private StringBuilder attributes;
         private IList<TagNode> children = new List<TagNode>();
-        private string name;
         private string value = string.Empty;
+
+        public string Name { get; }
+        public TagNode Parent { get; private set; }
 
         public TagNode(string name)
         {
-            this.name = name;
             this.attributes = new StringBuilder();
+            this.Name = name;
         }
 
-        public void Add(TagNode tagNode)
+        public void Add(TagNode childNode)
         {
-            this.children.Add(tagNode);
+            childNode.Parent = this;
+            this.children.Add(childNode);
         }
 
         public void AddAttribute(string attribute, string value)
@@ -38,9 +41,9 @@ namespace EncapsulateCompositeWithBuilder.MyWork
         public override string ToString()
         {
             var result =
-                "<" + this.name + this.attributes + ">";
+                "<" + this.Name + this.attributes + ">";
 
-            if (ShouldSelfClose())
+            if (this.ShouldSelfClose())
             {
                 return result.Replace(">", "/>");
             }
@@ -51,13 +54,13 @@ namespace EncapsulateCompositeWithBuilder.MyWork
             }
 
             result += this.value +
-                "</" + this.name + ">";
+                "</" + this.Name + ">";
             return result;
         }
 
         private bool ShouldSelfClose()
         {
-            return !HasValue() && !HasChildren();
+            return !this.HasValue() && !this.HasChildren();
         }
 
         private bool HasChildren()

@@ -1,5 +1,4 @@
-﻿using System;
-using EncapsulateCompositeWithBuilder.MyWork;
+﻿using EncapsulateCompositeWithBuilder.MyWork;
 
 namespace EncapsulateCompositeWithBuilder.MyWork
 {
@@ -21,14 +20,18 @@ namespace EncapsulateCompositeWithBuilder.MyWork
 
         public void AddChild(string childTagName)
         {
-            TagNode parentNode = this.currentNode;
-            this.currentNode = new TagNode(childTagName);
-            parentNode.Add(this.currentNode);
+            AddTo(this.currentNode, childTagName);
         }
 
-        public void AddSibling(string v)
+        public void AddSibling(string siblingTagName)
         {
-            throw new NotImplementedException();
+            AddTo(currentNode.Parent, siblingTagName);
+        }
+
+        private void AddTo(TagNode parentNode, string tagName)
+        {
+            this.currentNode = new TagNode(tagName);
+            parentNode.Add(this.currentNode);
         }
     }
 }
