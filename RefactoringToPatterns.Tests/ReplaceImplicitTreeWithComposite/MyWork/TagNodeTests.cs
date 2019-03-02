@@ -4,7 +4,7 @@ using ReplaceImplicitTreeWithComposite.MyWork;
 namespace RefactoringToPatterns.ReplaceImplicitTreeWithComposite.MyWork
 {
     [TestFixture]
-    public class TagTests
+    public class TagNodeTests
     {
         private const string SamplePrice = "2.39";
 
