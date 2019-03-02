@@ -4,7 +4,7 @@ using EncapsulateCompositeWithBuilder.MyWork;
 namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
 {
     [TestFixture]
-    public class TagTests
+    public class TagNodeTests
     {
         private const string SamplePrice = "2.39";
 

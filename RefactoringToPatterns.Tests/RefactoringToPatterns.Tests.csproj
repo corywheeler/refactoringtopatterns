@@ -60,8 +60,8 @@
     <Compile Include="ComposeMethod\MyWork\ListTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterWithOrdersTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\OrdersWriterWithOrdersTests.cs" />
-    <Compile Include="EncapsulateCompositeWithBuilder\InitialCode\TagTests.cs" />
-    <Compile Include="EncapsulateCompositeWithBuilder\MyWork\TagTests.cs" />
+    <Compile Include="EncapsulateCompositeWithBuilder\InitialCode\TagNodeTests.cs" />
+    <Compile Include="EncapsulateCompositeWithBuilder\MyWork\TagNodeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
