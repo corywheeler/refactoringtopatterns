@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using EncapsulateCompositeWithBuilder.MyWork;
+using System;
 
 namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
 {
@@ -100,6 +101,24 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             }
 
             Assert.AreEqual(expectedXml, builder.ToXml());
+        }
+
+        [Test]
+        public void TestParentNameNotFound()
+        {
+            TagBuilder builder = new TagBuilder("flavors");
+
+            SystemException exception = Assert.Throws<SystemException>(() =>
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    builder.AddToParent("favors", "flavor");
+                    builder.AddChild("requirements");
+                    builder.AddChild("requirement");
+                }
+            });
+
+            Assert.AreEqual("missing parent tag: favors", exception.Message);
         }
     }
 }

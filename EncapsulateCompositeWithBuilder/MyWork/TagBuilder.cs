@@ -1,4 +1,5 @@
 ﻿using EncapsulateCompositeWithBuilder.MyWork;
+using System;
 
 namespace EncapsulateCompositeWithBuilder.MyWork
 {
@@ -30,7 +31,10 @@ namespace EncapsulateCompositeWithBuilder.MyWork
 
         public void AddToParent(string parentTagName, string childTagName)
         {
-            this.AddTo(this.FindParentBy(parentTagName), childTagName);
+            TagNode parentNode = this.FindParentBy(parentTagName);
+            if (parentNode == null)
+                throw new SystemException("missing parent tag: " + parentTagName);
+            this.AddTo(parentNode, childTagName);
         }
 
         private void AddTo(TagNode parentNode, string tagName)
