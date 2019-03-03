@@ -72,5 +72,34 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
 
 
         }
+
+        [Test]
+        public void TestRepeatingChildrenAndGrandchildren()
+        {
+            string expectedXml =
+                "<flavors>" +
+                  "<flavor>" +
+                    "<requirements>" +
+                      "<requirement/>" +
+                    "</requirements>" +
+                  "</flavor>" +
+                  "<flavor>" +
+                    "<requirements>" +
+                      "<requirement/>" +
+                    "</requirements>" +
+                  "</flavor>" +
+                "</flavors>";
+
+            TagBuilder builder = new TagBuilder("flavors");
+
+            for (int i = 0; i < 2; i++)
+            {
+                builder.AddToParent("flavors", "flavor");
+                builder.AddChild("requirements");
+                builder.AddChild("requirement");
+            }
+
+            Assert.AreEqual(expectedXml, builder.ToXml());
+        }
     }
 }

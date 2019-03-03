@@ -20,18 +20,36 @@ namespace EncapsulateCompositeWithBuilder.MyWork
 
         public void AddChild(string childTagName)
         {
-            AddTo(this.currentNode, childTagName);
+            this.AddTo(this.currentNode, childTagName);
         }
 
         public void AddSibling(string siblingTagName)
         {
-            AddTo(currentNode.Parent, siblingTagName);
+            this.AddTo(currentNode.Parent, siblingTagName);
+        }
+
+        public void AddToParent(string parentTagName, string childTagName)
+        {
+            this.AddTo(this.FindParentBy(parentTagName), childTagName);
         }
 
         private void AddTo(TagNode parentNode, string tagName)
         {
             this.currentNode = new TagNode(tagName);
             parentNode.Add(this.currentNode);
+        }
+
+        private TagNode FindParentBy(string parentName)
+        {
+            TagNode parentNode = this.currentNode;
+            while (parentNode != null)
+            {
+                if (parentName.Equals(parentNode.Name))
+                    return parentNode;
+                parentNode = parentNode.Parent;
+            }
+
+            return null;
         }
     }
 }
