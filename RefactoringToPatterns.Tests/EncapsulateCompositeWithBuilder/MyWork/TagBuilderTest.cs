@@ -7,6 +7,8 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
     [TestFixture]
     public class TagBuilderTest
     {
+
+
         [Test]
         public void TestBuildOneNode()
         {
@@ -118,7 +120,8 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
                 }
             });
 
-            Assert.AreEqual("missing parent tag: favors", exception.Message);
+            const string expectedErrorMessage = "missing parent tag: favors";
+            Assert.AreEqual(expectedErrorMessage, exception.Message);
         }
     }
 }
