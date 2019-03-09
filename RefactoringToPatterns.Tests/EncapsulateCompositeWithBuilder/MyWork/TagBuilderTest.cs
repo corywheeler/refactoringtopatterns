@@ -123,5 +123,33 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             const string expectedErrorMessage = "missing parent tag: favors";
             Assert.AreEqual(expectedErrorMessage, exception.Message);
         }
+
+        [Test]
+        public void testAttributesAndValues()
+        {
+            string expectedXml =
+                "<flavor name='Test-Driven Development'>" +
+                    "<requirements>" +
+                        "<requirement type='hardware'>" +
+                            "1 computer for every 2 participants" +
+                        "</requirement>" +
+                        "<requirement type='software'>" +
+                            "IDE" +
+                        "</requirement>" +
+                    "</requirements>" +
+                "</flavor>";
+
+            TagBuilder builder = new TagBuilder("flavor");
+            builder.AddAttribute("name", "Test-Driven Development");
+            builder.AddChild("requirements");
+            builder.AddToParent("requirements", "requirement");
+            builder.AddAttribute("type", "hardware");
+            builder.AddValue("1 computer for every 2 participants");
+            builder.AddToParent("requirements", "requirement");
+            builder.AddAttribute("type", "software");
+            builder.AddValue("IDE");
+
+            Assert.AreEqual(expectedXml, builder.ToXml());
+        }
     }
 }

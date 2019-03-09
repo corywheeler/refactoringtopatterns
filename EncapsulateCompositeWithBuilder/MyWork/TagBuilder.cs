@@ -14,9 +14,9 @@ namespace EncapsulateCompositeWithBuilder.MyWork
             this.currentNode = this.rootNode;
         }
 
-        public string ToXml()
+        public void AddAttribute(string name, string value)
         {
-            return this.rootNode.ToString();
+            this.currentNode.AddAttribute(name, value);
         }
 
         public void AddChild(string childTagName)
@@ -35,6 +35,16 @@ namespace EncapsulateCompositeWithBuilder.MyWork
             if (parentNode == null)
                 throw new SystemException("missing parent tag: " + parentTagName);
             this.AddTo(parentNode, childTagName);
+        }
+
+        public void AddValue(string value)
+        {
+            this.currentNode.AddValue(value);
+        }
+
+        public string ToXml()
+        {
+            return this.rootNode.ToString();
         }
 
         private void AddTo(TagNode parentNode, string tagName)
