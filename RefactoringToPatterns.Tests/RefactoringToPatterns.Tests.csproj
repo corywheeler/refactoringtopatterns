@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\AccumulationAcrossMethods.cs" />
+    <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\TagNodeTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
@@ -68,6 +69,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj">
+      <Project>{e55105e2-9a9c-4c43-9e98-ef308663f77d}</Project>
+      <Name>MoveAccumulationToCollectingParameter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj">
       <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>
       <Name>ReplaceConstructorsWithCreationMethods</Name>
