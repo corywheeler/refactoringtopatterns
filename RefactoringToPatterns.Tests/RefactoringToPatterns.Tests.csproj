@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Folder Include="MoveAccumulationToCollectingParameter\InitialCode" />
+    <Folder Include="MoveAccumulationToCollectingParameter\MyWork" />
     <Folder Include="PolymorphicCreationWithFactoryMethod\" />
     <Folder Include="PolymorphicCreationWithFactoryMethod\InitialCode\" />
     <Folder Include="PolymorphicCreationWithFactoryMethod\MyWork\" />
