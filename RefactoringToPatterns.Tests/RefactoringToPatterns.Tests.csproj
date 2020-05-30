@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
+    <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\AccumulationAcrossMethods.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
@@ -106,7 +107,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Folder Include="MoveAccumulationToCollectingParameter\InitialCode" />
     <Folder Include="MoveAccumulationToCollectingParameter\MyWork" />
     <Folder Include="PolymorphicCreationWithFactoryMethod\" />
     <Folder Include="PolymorphicCreationWithFactoryMethod\InitialCode\" />
