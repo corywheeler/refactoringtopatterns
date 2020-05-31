@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -34,17 +33,20 @@ namespace MoveAccumulationToCollectingParameter.MyWork
         private void AppendContentsTo(StringBuilder result)
         {
             WriteOpenTagTo(result);
-
-            if (!_value.Equals(""))
-            {
-                result.Append(_value);
-            }
-
+            WriteValueTo(result);
             WriteChildrenTo(result);
 
             result.Append("</");
             result.Append(_tagName);
             result.Append(">");
+        }
+
+        private void WriteValueTo(StringBuilder result)
+        {
+            if (!_value.Equals(""))
+            {
+                result.Append(_value);
+            }
         }
 
         private void WriteChildrenTo(StringBuilder result)
