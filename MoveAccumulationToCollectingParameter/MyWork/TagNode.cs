@@ -27,23 +27,32 @@ namespace MoveAccumulationToCollectingParameter.MyWork
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
+            AppendContentsTo(result);
+            return result.ToString();
+        }
+
+        private void AppendContentsTo(StringBuilder result)
+        {
             WriteOpenTagTo(result);
 
             if (!_value.Equals(""))
             {
                 result.Append(_value);
             }
-            
-            foreach (TagNode child in _children)
-            {
-                result.Append(child);
-            }
+
+            WriteChildrenTo(result);
 
             result.Append("</");
             result.Append(_tagName);
             result.Append(">");
-            
-            return result.ToString();
+        }
+
+        private void WriteChildrenTo(StringBuilder result)
+        {
+            foreach (TagNode child in _children)
+            {
+                child.AppendContentsTo(result);
+            }
         }
 
         private void WriteOpenTagTo(StringBuilder result)
