@@ -27,12 +27,7 @@ namespace MoveAccumulationToCollectingParameter.MyWork
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
-
-            result.Append("<");
-            result.Append(_tagName);
-            result.Append(" ");
-            result.Append(_attributes);
-            result.Append(">");
+            WriteOpenTagTo(result);
 
             if (!_value.Equals(""))
             {
@@ -49,6 +44,15 @@ namespace MoveAccumulationToCollectingParameter.MyWork
             result.Append(">");
             
             return result.ToString();
+        }
+
+        private void WriteOpenTagTo(StringBuilder result)
+        {
+            result.Append("<");
+            result.Append(_tagName);
+            result.Append(" ");
+            result.Append(_attributes);
+            result.Append(">");
         }
     }
 }
