@@ -5,10 +5,10 @@ namespace MoveAccumulationToCollectingParameter.MyWork
 {
     public class TagNode
     {
-        private string _tagName;
-        private string _attributes;
+        private readonly string _tagName;
+        private readonly string _attributes;
         private readonly string _value;
-        private List<TagNode> _children;
+        private readonly List<TagNode> _children;
 
         public TagNode(string tagName, string attributes, string value)
         {
