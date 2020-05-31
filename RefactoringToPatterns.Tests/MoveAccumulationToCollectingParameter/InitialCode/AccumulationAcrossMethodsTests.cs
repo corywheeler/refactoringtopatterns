@@ -18,7 +18,7 @@ using NUnit.Framework;
 * for anyone that hit that part of the book and maybe didn't have an understanding of what Joshua was talking about.
 */
 
-namespace RefactoringToPatterns.Tests.MoveAccumulationToCollectingParameter.InitialCode
+namespace RefactoringToPatterns.MoveAccumulationToCollectingParameter.InitialCode
 {
     [TestFixture]
     public class AccumulationAcrossMethodsTests
