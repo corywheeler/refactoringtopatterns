@@ -35,7 +35,11 @@ namespace MoveAccumulationToCollectingParameter.MyWork
             WriteOpenTagTo(result);
             WriteValueTo(result);
             WriteChildrenTo(result);
+            WriteEndTagTo(result);
+        }
 
+        private void WriteEndTagTo(StringBuilder result)
+        {
             result.Append("</");
             result.Append(_tagName);
             result.Append(">");
