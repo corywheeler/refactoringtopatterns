@@ -28,7 +28,11 @@ namespace MoveAccumulationToCollectingParameter.MyWork
         {
             StringBuilder result = new StringBuilder();
 
-            result.Append("<" + _tagName + " " + _attributes + ">");
+            result.Append("<");
+            result.Append(_tagName);
+            result.Append(" ");
+            result.Append(_attributes);
+            result.Append(">");
 
             if (!_value.Equals(""))
             {
@@ -40,7 +44,10 @@ namespace MoveAccumulationToCollectingParameter.MyWork
                 result.Append(child);
             }
 
-            result.Append("</" + _tagName + ">");
+            result.Append("</");
+            result.Append(_tagName);
+            result.Append(">");
+            
             return result.ToString();
         }
     }
