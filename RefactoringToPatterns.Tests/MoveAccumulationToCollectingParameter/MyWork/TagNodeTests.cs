@@ -1,7 +1,7 @@
 using MoveAccumulationToCollectingParameter.MyWork;
 using NUnit.Framework;
 
-namespace RefactoringToPatterns.Tests.MoveAccumulationToCollectingParameter.MyWork
+namespace RefactoringToPatterns.MoveAccumulationToCollectingParameter.MyWork
 {
     [TestFixture]
     public class TagNodeTests
