@@ -28,11 +28,11 @@ namespace RefactoringToPatterns.Tests.MoveAccumulationToCollectingParameter.MyWo
         public void Accumulate_With_String_Does_Not_Work_Across_Method_Calls()
         {
             string expectedFullName = "Cory Wheeler";
-            string myFullName = "Cory";
+            string notMyFullName = "Cory";
             
-            AccumulateWithString(myFullName);
+            AccumulateWithString(notMyFullName);
             
-            Assert.AreEqual(expectedFullName, myFullName);
+            Assert.AreNotEqual(expectedFullName, notMyFullName);
         }
 
         [Test]
