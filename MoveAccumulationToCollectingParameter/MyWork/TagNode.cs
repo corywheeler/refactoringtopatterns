@@ -37,22 +37,7 @@ namespace MoveAccumulationToCollectingParameter.MyWork
             WriteChildrenTo(result);
             WriteEndTagTo(result);
         }
-
-        private void WriteEndTagTo(StringBuilder result)
-        {
-            result.Append("</");
-            result.Append(_tagName);
-            result.Append(">");
-        }
-
-        private void WriteValueTo(StringBuilder result)
-        {
-            if (!_value.Equals(""))
-            {
-                result.Append(_value);
-            }
-        }
-
+        
         private void WriteChildrenTo(StringBuilder result)
         {
             foreach (TagNode child in _children)
@@ -61,6 +46,13 @@ namespace MoveAccumulationToCollectingParameter.MyWork
             }
         }
 
+        private void WriteEndTagTo(StringBuilder result)
+        {
+            result.Append("</");
+            result.Append(_tagName);
+            result.Append(">");
+        }
+        
         private void WriteOpenTagTo(StringBuilder result)
         {
             result.Append("<");
@@ -68,6 +60,14 @@ namespace MoveAccumulationToCollectingParameter.MyWork
             result.Append(" ");
             result.Append(_attributes);
             result.Append(">");
+        }
+        
+        private void WriteValueTo(StringBuilder result)
+        {
+            if (!_value.Equals(""))
+            {
+                result.Append(_value);
+            }
         }
     }
 }
