@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace MoveAccumulationToCollectingParameter.MyWork
 {
@@ -25,22 +26,22 @@ namespace MoveAccumulationToCollectingParameter.MyWork
 
         public override string ToString()
         {
-            string result = String.Empty;
+            StringBuilder result = new StringBuilder();
 
-            result += "<" + _tagName + " " + _attributes + ">";
+            result.Append("<" + _tagName + " " + _attributes + ">");
 
             if (!_value.Equals(""))
             {
-                result += _value;
+                result.Append(_value);
             }
             
             foreach (TagNode child in _children)
             {
-                result += child.ToString();
+                result.Append(child);
             }
 
-            result += "</" + _tagName + ">";
-            return result;
+            result.Append("</" + _tagName + ">");
+            return result.ToString();
         }
     }
 }
