@@ -8,7 +8,7 @@ namespace ExtractComposite.InitialCode
             _labelText = labelText;
         }
 
-        public override string ToString()
+        public override string ToPlainTextString()
         {
             return _labelText.ToPlainTextString();
         }

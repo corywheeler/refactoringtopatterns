@@ -13,7 +13,7 @@ namespace ExtractComposite.InitialCode
         public string ToPlainTextString()
         {
             var stringRepresentation = string.Empty;
-            GetAllNodes().ForEach(node => stringRepresentation += node.ToString());
+            GetAllNodes().ForEach(node => stringRepresentation += node.ToPlainTextString());
             return stringRepresentation;
         }
 
