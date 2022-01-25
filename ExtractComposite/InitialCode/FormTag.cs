@@ -1,10 +1,18 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace ExtractComposite.InitialCode
 {
-    public class FormTag
+    public class FormTag: Tag
     {
         private readonly List<Tag> _nodeList = new List<Tag>();
+
+        public FormTag() : base("<form>", "</form>")
+        {
+            
+        }
+        
+        
         public void AddChild(Tag tag)
         {
             _nodeList.Add(tag);

@@ -4,13 +4,13 @@ namespace ExtractComposite.InitialCode
 {
     public class Tag : Node
     {
-        protected string _openingTag;
-        protected string _closingTag;
+        protected string _openingTag = string.Empty;
+        protected string _closingTag= string.Empty;
 
-        public Tag()
+        protected Tag(string openingTag, string closingTag)
         {
-            _openingTag = string.Empty;
-            _closingTag = string.Empty;
+            _openingTag = openingTag;
+            _closingTag = closingTag;
         }
         
         public override string ToPlainTextString()

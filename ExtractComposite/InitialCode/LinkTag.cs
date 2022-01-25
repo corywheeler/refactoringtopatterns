@@ -6,10 +6,9 @@ namespace ExtractComposite.InitialCode
     {
         private readonly List<Node> _nodeList = new List<Node>();
 
-        public LinkTag()
+        public LinkTag(): base("<a href=_>","</a>")
         {
-            _openingTag = "<A HREF=_>";
-            _closingTag = "</A>";
+            
         }
         
         public override string ToPlainTextString()
