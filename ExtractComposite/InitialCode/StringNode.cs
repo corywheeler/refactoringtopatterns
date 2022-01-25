@@ -1,5 +1,3 @@
-using System.Threading;
-
 namespace ExtractComposite.InitialCode
 {
     public class StringNode : Node

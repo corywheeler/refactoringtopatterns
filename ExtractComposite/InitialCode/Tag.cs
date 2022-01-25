@@ -1,5 +1,3 @@
-using System;
-
 namespace ExtractComposite.InitialCode
 {
     public class Tag : Node
