@@ -20,11 +20,11 @@ namespace ExtractComposite.InitialCode
         public string ToPlainTextString()
         {
             var stringRepresentation = string.Empty;
-            GetAllNodes().ForEach(node => stringRepresentation += node.ToPlainTextString());
+            GetAllNodesList().ForEach(node => stringRepresentation += node.ToPlainTextString());
             return stringRepresentation;
         }
 
-        private List<Tag> GetAllNodes()
+        private List<Tag> GetAllNodesList()
         {
             return _allNodesList;
         }
