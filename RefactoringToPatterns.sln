@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulateCompositeWithBui
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveAccumulationToCollectingParameter", "MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj", "{E55105E2-9A9C-4C43-9E98-EF308663F77D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractComposite", "ExtractComposite\ExtractComposite.csproj", "{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,5 +75,9 @@ Global
 		{E55105E2-9A9C-4C43-9E98-EF308663F77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E55105E2-9A9C-4C43-9E98-EF308663F77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E55105E2-9A9C-4C43-9E98-EF308663F77D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

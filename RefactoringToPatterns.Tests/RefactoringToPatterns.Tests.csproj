@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
+    <Compile Include="ExtractComposite\InitialCode\FormTagTests.cs" />
+    <Compile Include="ExtractComposite\InitialCode\LabelTagTests.cs" />
+    <Compile Include="ExtractComposite\InitialCode\LinkTagTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\AccumulationAcrossMethodsTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\TagNodeTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\MyWork\AccumulationAcrossMethodsTests.cs" />
@@ -78,6 +81,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExtractComposite\ExtractComposite.csproj">
+      <Project>{ea0baf76-f1e5-45f5-b4c7-8b2c8e005249}</Project>
+      <Name>ExtractComposite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj">
       <Project>{e55105e2-9a9c-4c43-9e98-ef308663f77d}</Project>
       <Name>MoveAccumulationToCollectingParameter</Name>
