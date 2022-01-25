@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace ExtractComposite.InitialCode
 {
     public class FormTag: Tag
     {
-        private readonly List<Tag> _nodeList = new List<Tag>();
+        private readonly List<Tag> _allNodesList = new List<Tag>();
 
         public FormTag() : base("<form>", "</form>")
         {
@@ -15,7 +14,7 @@ namespace ExtractComposite.InitialCode
         
         public void AddChild(Tag tag)
         {
-            _nodeList.Add(tag);
+            _allNodesList.Add(tag);
         }
 
         public string ToPlainTextString()
@@ -27,7 +26,7 @@ namespace ExtractComposite.InitialCode
 
         private List<Tag> GetAllNodes()
         {
-            return _nodeList;
+            return _allNodesList;
         }
     }
 }
