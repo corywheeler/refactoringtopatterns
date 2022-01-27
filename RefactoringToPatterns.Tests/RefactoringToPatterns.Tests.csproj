@@ -45,6 +45,9 @@
     <Compile Include="ExtractComposite\InitialCode\FormTagTests.cs" />
     <Compile Include="ExtractComposite\InitialCode\LabelTagTests.cs" />
     <Compile Include="ExtractComposite\InitialCode\LinkTagTests.cs" />
+    <Compile Include="ExtractComposite\MyWork\FormTagTests.cs" />
+    <Compile Include="ExtractComposite\MyWork\LabelTagTests.cs" />
+    <Compile Include="ExtractComposite\MyWork\LinkTagTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\AccumulationAcrossMethodsTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\TagNodeTests.cs" />
     <Compile Include="MoveAccumulationToCollectingParameter\MyWork\AccumulationAcrossMethodsTests.cs" />
