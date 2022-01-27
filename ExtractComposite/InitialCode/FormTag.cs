@@ -10,8 +10,7 @@ namespace ExtractComposite.InitialCode
         {
             
         }
-        
-        
+
         public void AddChild(Tag tag)
         {
             _allNodesList.Add(tag);
