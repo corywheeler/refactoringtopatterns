@@ -44,6 +44,12 @@
         <Compile Include="InitialCode\Node.cs" />
         <Compile Include="InitialCode\StringNode.cs" />
         <Compile Include="InitialCode\Tag.cs" />
+        <Compile Include="MyWork\FormTag.cs" />
+        <Compile Include="MyWork\LabelTag.cs" />
+        <Compile Include="MyWork\LinkTag.cs" />
+        <Compile Include="MyWork\Node.cs" />
+        <Compile Include="MyWork\StringNode.cs" />
+        <Compile Include="MyWork\Tag.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

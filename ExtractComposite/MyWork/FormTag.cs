@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ExtractComposite.InitialCode
+namespace ExtractComposite.MyWork
 {
     public class FormTag: Tag
     {
@@ -10,7 +10,7 @@ namespace ExtractComposite.InitialCode
         {
             
         }
-
+        
         public void AddChild(Tag tag)
         {
             _allNodesList.Add(tag);
