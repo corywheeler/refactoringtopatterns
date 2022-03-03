@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ExtractComposite.MyWork
 {
-    public class LinkTag: Tag
+    public class LinkTag: CompositeTag
     {
         private readonly List<Node> _nodeList = new List<Node>();
 

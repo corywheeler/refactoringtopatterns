@@ -1,6 +1,6 @@
 namespace ExtractComposite.MyWork
 {
-    public class LabelTag: Tag 
+    public class LabelTag: CompositeTag 
     {
         private StringNode _labelText;
         public LabelTag(StringNode labelText): base("<label>","</label>")

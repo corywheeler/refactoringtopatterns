@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ExtractComposite.MyWork
 {
-    public class FormTag: Tag
+    public class FormTag: CompositeTag
     {
         private readonly List<Tag> _allNodesList = new List<Tag>();
 
