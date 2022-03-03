@@ -4,7 +4,6 @@ namespace ExtractComposite.MyWork
 {
     public class LinkTag: CompositeTag
     {
-        private readonly List<Node> _nodeList = new List<Node>();
 
         public LinkTag(): base("<a href=_>","</a>")
         {

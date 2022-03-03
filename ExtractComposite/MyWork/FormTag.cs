@@ -4,8 +4,6 @@ namespace ExtractComposite.MyWork
 {
     public class FormTag: CompositeTag
     {
-        private readonly List<Tag> _allNodesList = new List<Tag>();
-
         public FormTag() : base("<form>", "</form>")
         {
             
@@ -13,7 +11,7 @@ namespace ExtractComposite.MyWork
         
         public void AddChild(Tag tag)
         {
-            _allNodesList.Add(tag);
+            _nodeList.Add(tag);
         }
 
         public string ToPlainTextString()
@@ -23,9 +21,9 @@ namespace ExtractComposite.MyWork
             return stringRepresentation;
         }
 
-        private List<Tag> GetAllNodesList()
+        private List<Node> GetAllNodesList()
         {
-            return _allNodesList;
+            return _nodeList;
         }
     }
 }
