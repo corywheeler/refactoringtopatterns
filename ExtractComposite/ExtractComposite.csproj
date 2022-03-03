@@ -45,6 +45,7 @@
         <Compile Include="InitialCode\Node.cs" />
         <Compile Include="InitialCode\StringNode.cs" />
         <Compile Include="InitialCode\Tag.cs" />
+        <Compile Include="MyWork\CompositeTag.cs" />
         <Compile Include="MyWork\FormTag.cs" />
         <Compile Include="MyWork\LabelTag.cs" />
         <Compile Include="MyWork\LinkTag.cs" />
