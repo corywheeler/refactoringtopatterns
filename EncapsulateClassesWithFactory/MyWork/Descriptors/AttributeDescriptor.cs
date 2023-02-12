@@ -2,7 +2,7 @@
 
 namespace EncapsulateClassesWithFactory.MyWork.Descriptors
 {
-    public class AttributeDescriptor
+    public abstract class AttributeDescriptor
     {
         readonly string descriptorName;
         readonly Type mapperType;
