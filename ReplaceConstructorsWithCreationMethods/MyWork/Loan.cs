@@ -11,26 +11,26 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 		private readonly DateTime? _expiry;
 		private readonly CapitalStrategy _capitalStrategy;
 
-        public Loan(double commitment, int riskRating, DateTime? maturity)
+        private Loan(double commitment, int riskRating, DateTime? maturity)
             : this(commitment, 0.00, riskRating, maturity, null)
 		{
 
 		}
 
-		public Loan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
+		private Loan(double commitment, int riskRating, DateTime? maturity, DateTime? expiry)
 			: this(commitment, 0.00, riskRating, maturity, expiry)
 		{
 
 		}
 
-		public Loan(double commitment, double outstanding, 
+		private Loan(double commitment, double outstanding, 
                     int riskRating, DateTime? maturity, DateTime? expiry)
 			: this(null, commitment, outstanding, riskRating, maturity, expiry)
 		{
 
 		}
 
-		public Loan(CapitalStrategy capitalStrategy, double commitment,
+		private Loan(CapitalStrategy capitalStrategy, double commitment,
 					int riskRating, DateTime? maturity, DateTime? expiry)
 			: this(capitalStrategy, commitment, 0.00, riskRating, maturity, expiry)
 		{
@@ -65,6 +65,21 @@ namespace ReplaceConstructorsWithCreationMethods.MyWork
 			{
 				return _capitalStrategy;
 			}
+		}
+		
+		public static Loan CreateTermLoan(double commitment, int riskRating, DateTime? maturity)
+		{
+			return new Loan(commitment, riskRating, maturity);
+		}
+		
+		public static Loan CreateRevoloverLoan(double commitment, int riskRating, object o, DateTime? expiry)
+		{
+			return new Loan(commitment, riskRating, null, expiry);
+		}
+		
+		public static Loan RevolvingCreditTermLoan(double commitment, double outstanding, int riskRating, DateTime? maturity, DateTime? expiry)
+		{
+			return new Loan(commitment, outstanding, riskRating, maturity, expiry);
 		}
 	}
 }
