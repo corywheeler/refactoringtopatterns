@@ -14,12 +14,14 @@ Have to say thank you to Joshua for putting all of these patterns together and f
 ## Language && IDE Concerns
 All code samples are written in C#, and therefor will follow C# coding conventions (versus any Java coding conventions you might see in the book).
 
-I have tested running this code in the following IDE's, and all seems to work fine:
-* [Visual Studio 2015 (on Windows)](https://www.visualstudio.com/vs/older-downloads/)
-* [Visual Studio Community 2017 (for Mac)](https://www.visualstudio.com/vs/visual-studio-mac/)
-* [Rider EAP versions (on Windows)](https://www.jetbrains.com/rider/)
+The projects target [.NET 10](https://dotnet.microsoft.com/download/dotnet/10.0) and build on Windows, macOS, and Linux. With the .NET 10 SDK installed, run from the repository root:
 
-There might be an issue with Visual Studio 2017 (on Windows), but I've not been able to dig into it as of yet.
+```
+dotnet build
+dotnet test
+```
+
+Any IDE with .NET 10 support works, e.g. [Visual Studio 2026](https://visualstudio.microsoft.com/), [Rider](https://www.jetbrains.com/rider/), or [VS Code with C# Dev Kit](https://code.visualstudio.com/docs/csharp/get-started).
 
 ### Other Language Implementations
 
