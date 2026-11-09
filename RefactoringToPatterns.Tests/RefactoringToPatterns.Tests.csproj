@@ -1,160 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E49F4DC-8D6A-4DED-970C-D9C4DDD43A40}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>RefactoringToPatterns.Tests</RootNamespace>
-    <AssemblyName>RefactoringToPatterns.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <LangVersion>9</LangVersion>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
-      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="mscorlib" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
-    <Compile Include="ExtractComposite\InitialCode\FormTagTests.cs" />
-    <Compile Include="ExtractComposite\InitialCode\LabelTagTests.cs" />
-    <Compile Include="ExtractComposite\InitialCode\LinkTagTests.cs" />
-    <Compile Include="ExtractComposite\MyWork\FormTagTests.cs" />
-    <Compile Include="ExtractComposite\MyWork\LabelTagTests.cs" />
-    <Compile Include="ExtractComposite\MyWork\LinkTagTests.cs" />
-    <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\AccumulationAcrossMethodsTests.cs" />
-    <Compile Include="MoveAccumulationToCollectingParameter\InitialCode\TagNodeTests.cs" />
-    <Compile Include="MoveAccumulationToCollectingParameter\MyWork\AccumulationAcrossMethodsTests.cs" />
-    <Compile Include="MoveAccumulationToCollectingParameter\MyWork\TagNodeTests.cs" />
-    <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
-    <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
-    <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
-    <Compile Include="ChainConstructors\MyWork\CapitalCalculationTests.cs" />
-    <Compile Include="EncapsulateClassesWithFactory\InitialCode\Mappers\DescriptorMapperTests.cs" />
-    <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\DomBuilderTestTests.cs" />
-    <Compile Include="PolymorphicCreationWithFactoryMethod\InitialCode\XMLBuilderTestTests.cs" />
-    <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\DomBuilderTestTests.cs" />
-    <Compile Include="PolymorphicCreationWithFactoryMethod\MyWork\XMLBuilderTestTests.cs" />
-    <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\LoanTests.cs" />
-    <Compile Include="ReplaceConditionalLogicWithStrategy\InitialCode\PaymentTests.cs" />
-    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\LoanTests.cs" />
-    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\PaymentTests.cs" />
-    <Compile Include="FormTemplateMethod\InitialCode\AdvisedLineStrategyTests.cs" />
-    <Compile Include="FormTemplateMethod\InitialCode\PaymentTests.cs" />
-    <Compile Include="FormTemplateMethod\InitialCode\RevolverStrategyTests.cs" />
-    <Compile Include="FormTemplateMethod\InitialCode\TermLoanStrategyTests.cs" />
-    <Compile Include="FormTemplateMethod\MyWork\AdvisedLineStrategyTests.cs" />
-    <Compile Include="FormTemplateMethod\MyWork\PaymentTests.cs" />
-    <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
-    <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
-    <Compile Include="ComposeMethod\InitialCode\ListTests.cs" />
-    <Compile Include="ComposeMethod\MyWork\ListTests.cs" />
-    <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterWithOrdersTests.cs" />
-    <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\OrdersWriterWithOrdersTests.cs" />
-    <Compile Include="EncapsulateCompositeWithBuilder\InitialCode\TagNodeTests.cs" />
-    <Compile Include="EncapsulateCompositeWithBuilder\MyWork\TagNodeTests.cs" />
+    <ProjectReference Include="..\ChainConstructors\ChainConstructors.csproj" />
+    <ProjectReference Include="..\ComposeMethod\ComposeMethod.csproj" />
+    <ProjectReference Include="..\EncapsulateClassesWithFactory\EncapsulateClassesWithFactory.csproj" />
+    <ProjectReference Include="..\EncapsulateCompositeWithBuilder\EncapsulateCompositeWithBuilder.csproj" />
+    <ProjectReference Include="..\ExtractComposite\ExtractComposite.csproj" />
+    <ProjectReference Include="..\FormTemplateMethod\FormTemplateMethod.csproj" />
+    <ProjectReference Include="..\MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj" />
+    <ProjectReference Include="..\PolymorphicCreationWithFactoryMethod\PolymorphicCreationWithFactoryMethod.csproj" />
+    <ProjectReference Include="..\ReplaceConditionalLogicWithStrategy\ReplaceConditionalLogicWithStrategy.csproj" />
+    <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj" />
+    <ProjectReference Include="..\ReplaceImplicitTreeWithComposite\ReplaceImplicitTreeWithComposite.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ExtractComposite\ExtractComposite.csproj">
-      <Project>{ea0baf76-f1e5-45f5-b4c7-8b2c8e005249}</Project>
-      <Name>ExtractComposite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj">
-      <Project>{e55105e2-9a9c-4c43-9e98-ef308663f77d}</Project>
-      <Name>MoveAccumulationToCollectingParameter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj">
-      <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>
-      <Name>ReplaceConstructorsWithCreationMethods</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChainConstructors\ChainConstructors.csproj">
-      <Project>{1CB60E44-2BCF-426A-9A1C-64598F2BF93E}</Project>
-      <Name>ChainConstructors</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EncapsulateClassesWithFactory\EncapsulateClassesWithFactory.csproj">
-      <Project>{F2D41130-D1A6-4F83-8408-F02D6AAF279C}</Project>
-      <Name>EncapsulateClassesWithFactory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PolymorphicCreationWithFactoryMethod\PolymorphicCreationWithFactoryMethod.csproj">
-      <Project>{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}</Project>
-      <Name>PolymorphicCreationWithFactoryMethod</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ReplaceConditionalLogicWithStrategy\ReplaceConditionalLogicWithStrategy.csproj">
-      <Project>{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}</Project>
-      <Name>ReplaceConditionalLogicWithStrategy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FormTemplateMethod\FormTemplateMethod.csproj">
-      <Project>{F1231A49-7229-47D8-B19F-197683E3A829}</Project>
-      <Name>FormTemplateMethod</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ComposeMethod\ComposeMethod.csproj">
-      <Project>{DB582B2C-1FED-426E-8DBC-9618ECA07843}</Project>
-      <Name>ComposeMethod</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ReplaceImplicitTreeWithComposite\ReplaceImplicitTreeWithComposite.csproj">
-      <Project>{DA8504D9-4160-43FB-AEE5-E6DDC9368A91}</Project>
-      <Name>ReplaceImplicitTreeWithComposite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EncapsulateCompositeWithBuilder\EncapsulateCompositeWithBuilder.csproj">
-      <Project>{9CA5D6B8-43D4-4325-9E7D-BF7E1E2D4C51}</Project>
-      <Name>EncapsulateCompositeWithBuilder</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Folder Include="PolymorphicCreationWithFactoryMethod\" />
-    <Folder Include="PolymorphicCreationWithFactoryMethod\InitialCode\" />
-    <Folder Include="PolymorphicCreationWithFactoryMethod\MyWork\" />
-    <Folder Include="ReplaceConditionalLogicWithStrategy\" />
-    <Folder Include="ReplaceConditionalLogicWithStrategy\InitialCode\" />
-    <Folder Include="ReplaceConditionalLogicWithStrategy\MyWork\" />
-    <Folder Include="FormTemplateMethod\" />
-    <Folder Include="FormTemplateMethod\InitialCode\" />
-    <Folder Include="FormTemplateMethod\MyWork\" />
-    <Folder Include="ComposeMethod\" />
-    <Folder Include="ComposeMethod\InitialCode\" />
-    <Folder Include="ComposeMethod\MyWork\" />
-    <Folder Include="ReplaceImplicitTreeWithComposite\" />
-    <Folder Include="ReplaceImplicitTreeWithComposite\InitialCode\" />
-    <Folder Include="ReplaceImplicitTreeWithComposite\MyWork\" />
-    <Folder Include="EncapsulateCompositeWithBuilder\" />
-    <Folder Include="EncapsulateCompositeWithBuilder\InitialCode\" />
-    <Folder Include="EncapsulateCompositeWithBuilder\MyWork\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
-  </Target>
+
 </Project>
